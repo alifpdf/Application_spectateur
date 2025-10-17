@@ -1,0 +1,15 @@
+{
+    "value": {
+        "seenScripts": [
+            [
+                "/home/alif/alif/build.mill",
+                "import mill.*, scalalib.*, scalajslib.*\nimport mill.scalajslib.api.ModuleKind\nimport mill.api.Task.Simple\nimport os.Path\n\nobject versions:\n  def scala = \"3.7.3\"\n  def scalaJS = \"1.20.1\"\n  def dom     = \"2.8.1\"\n\nobject common extends ScalaModule:\n  def scalaVersion = versions.scala\n\n  def mvnDeps = Seq(\n    mvn\"com.lihaoyi::upickle::4.3.2\"\n  )\n\n  object js extends ScalaJSModule:\n    def scalaVersion = versions.scala\n    def scalaJSVersion = versions.scalaJS\n\n    def moduleDir: Path = common.moduleDir\n    def mvnDeps = common.mvnDeps\n\n\nobject bluetooth extends ScalaJSModule:\n  def scalaVersion   = versions.scala\n  def scalaJSVersion = versions.scalaJS\n  def moduleDeps     = Seq(common.js)\n  def moduleKind     = ModuleKind.ESModule\n  def mvnDeps = Seq(\n    mvn\"org.scala-js::scalajs-dom::${versions.dom}\" // Web Bluetooth via `navigator.bluetooth`\n  )\n\n\n\nobject server extends ScalaModule:\n  def scalaVersion = versions.scala\n\n  def moduleDeps = Seq(common)\n\n  def mvnDeps = Seq( \n    mvn\"com.lihaoyi::cask:0.10.2\",\n    mvn\"com.lihaoyi::os-lib:0.11.5\",\n   \n  )\n\n  def resources = Task(\n    super.resources()\n    ++ client.resources()\n    :+ client.fullLinkJS().dest\n  )\n\nobject client extends ScalaJSModule:\n  def scalaVersion   = versions.scala\n  def scalaJSVersion = versions.scalaJS\n\n  def moduleDeps = Seq(common.js)\n\n  def mvnDeps = Seq(\n    mvn\"io.indigoengine::tyrian::0.14.0\",\n    mvn\"io.indigoengine::tyrian-io::0.14.0\"\n  )\n\n  def moduleKind = ModuleKind.ESModule"
+            ]
+        ],
+        "errors": [],
+        "buildFile": "build.mill",
+        "headerData": ""
+    },
+    "valueHash": -311504818,
+    "inputsHash": -111291147
+}

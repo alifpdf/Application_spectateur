@@ -1,0 +1,15 @@
+{
+    "value": {
+        "publicModules": [
+            {
+                "moduleID": "main",
+                "jsFileName": "main.js",
+                "sourceMapName": "main.js.map",
+                "moduleKind": "ESModule"
+            }
+        ],
+        "dest": "ref:v0:8887367a:/home/alif/alif/out/mill-bsp-out/client/fullLinkJS.dest"
+    },
+    "valueHash": -946721547,
+    "inputsHash": -1213296811
+}

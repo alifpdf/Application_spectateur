@@ -1,0 +1,10 @@
+{
+    "value": [
+        "ref:v0:ed8be70d:/home/alif/alif/server/resources",
+        "ref:v0:c984eca8:/home/alif/alif/client/resources",
+        "ref:v0:9d8ef4e7:/home/alif/alif/out/client/fullLinkJS.dest",
+        "ref:v0:f1f550ca:/home/alif/alif/out/server/compile.dest/classes"
+    ],
+    "valueHash": 1360870367,
+    "inputsHash": 1959590568
+}

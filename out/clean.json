@@ -1,0 +1,13 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/home/alif/alif/out/clean.json",
+        "ref:v0:c984eca8:/home/alif/alif/out/client",
+        "ref:v0:c984eca8:/home/alif/alif/out/clientCoach",
+        "ref:v0:c984eca8:/home/alif/alif/out/clientSpec",
+        "ref:v0:c984eca8:/home/alif/alif/out/common",
+        "ref:v0:c984eca8:/home/alif/alif/out/mill",
+        "ref:v0:c984eca8:/home/alif/alif/out/server"
+    ],
+    "valueHash": -704085419,
+    "inputsHash": 626823922
+}

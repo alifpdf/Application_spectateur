@@ -1,0 +1,29 @@
+Linker: Compute reachability: 1167021 us
+Linker: Assemble LinkedClasses: 90883 us
+Linker: 1297027 us
+Desugarer: Desugar: 53946 us
+Desugarer: 54863 us
+Optimizer: Batch mode: true
+Optimizer: Incremental part: 367319 us
+Optimizer: Elidable constructors: 6449 us
+Optimizer: Optimizing 17130 methods.
+Optimizer: Optimizer part: 2389943 us
+Optimizer: 2801891 us
+Refiner: Compute reachability: 342853 us
+Refiner: Assemble LinkedClasses: 37420 us
+Refiner: 384410 us
+Module Splitter: Calculate Dependency Info: 6249 us
+Module Splitter: Analyze Modules: 1836 us
+Module Splitter: Assemble Modules: 16118 us
+Module Splitter: 26435 us
+Emitter: Generate Classes: 1033614 us
+Emitter: Write trees: 35999 us
+Emitter: Class tree cache stats: reused: 0 -- invalidated: 2078
+Emitter: Method tree cache stats: reused: 0 -- invalidated: 7870
+Emitter: Pre prints: 11624
+Name compressor: Collect property names to avoid: 3541 us
+Name compressor: Allocate property names: 31486 us
+Name compressor: Allocate ancestor names: 4609 us
+Emitter: 1168718 us
+BasicBackend: Write result: 270035 us
+BasicBackend: total modules: 1; re-written: 1

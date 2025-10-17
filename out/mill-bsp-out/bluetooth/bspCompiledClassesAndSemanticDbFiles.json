@@ -1,0 +1,12 @@
+{
+    "value": {
+        "$type": "DestPath",
+        "subPath": "",
+        "segments": [
+            "bluetooth",
+            "compiledClassesAndSemanticDbFiles"
+        ]
+    },
+    "valueHash": 1088881587,
+    "inputsHash": -566697820
+}

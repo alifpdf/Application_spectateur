@@ -1,0 +1,13 @@
+{
+  "mill.javalib.JvmWorkerModule.internalWorker": {},
+  "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorker": {},
+  "client.sources": {
+    "client.allSources": {
+      "client.allSourceFiles": {
+        "client.compile": {}
+      }
+    }
+  },
+  "mill.scalajslib.worker.ScalaJSWorkerExternalModule.scalaJSWorker": {},
+  "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorkerClassloader": {}
+}

@@ -1,0 +1,11 @@
+{
+    "value": {
+        "compilationResult": {
+            "analysisFile": "/home/alif/alif/out/mill-bsp-out/server/semanticDbDataDetailed.dest/zinc",
+            "classes": "ref:v0:3ae1e35b:/home/alif/alif/out/mill-bsp-out/server/semanticDbDataDetailed.dest/classes"
+        },
+        "semanticDbFiles": "ref:v0:9baa1550:/home/alif/alif/out/mill-bsp-out/server/semanticDbDataDetailed.dest/data"
+    },
+    "valueHash": -507210246,
+    "inputsHash": 952574247
+}

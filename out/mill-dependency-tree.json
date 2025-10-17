@@ -1,0 +1,345 @@
+{
+  "server.run": {
+    "server.propagateEnv": {},
+    "server.finalMainClass": {},
+    "server.forkArgs": {},
+    "server.finalMainClassOpt": {
+      "server.allLocalMainClasses": {
+        "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorker": {
+          "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorkerClassloader": {
+            "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorkerClasspath": {
+              "mill.javalib.classgraph.ClassgraphWorkerModule.checkGradleModules": {},
+              "mill.javalib.classgraph.ClassgraphWorkerModule.repositories": {}
+            }
+          }
+        }
+      },
+      "server.mainClass": {}
+    },
+    "server.runUseArgsFile": {},
+    "server.forkWorkingDir": {},
+    "server.javaHome": {
+      "server.jvmId": {},
+      "mill.javalib.CoursierConfigModule.coursierEnv": {},
+      "server.jvmIndexVersion": {}
+    },
+    "server.allForkEnv": {
+      "server.forkEnv": {}
+    },
+    "server.runClasspath": {
+      "server.resolvedRunMvnDeps": {
+        "common.repositories": {},
+        "server.depManagement": {},
+        "server.transitiveCoursierProjects": {
+          "common.bomMvnDeps": {},
+          "common.compileMvnDeps": {},
+          "common.transitiveCoursierProjects": {},
+          "common.depManagement": {},
+          "common.mandatoryMvnDeps": {
+            "common.mandatoryMvnDeps.super.javalib.JavaModule": {},
+            "common.scalaLibraryMvnDeps": {
+              "common.scalaOrganization": {}
+            }
+          },
+          "common.runMvnDeps": {}
+        },
+        "server.repositories": {},
+        "server.artifactTypes": {},
+        "server.scalaOrganization": {},
+        "common.scalaVersion": {},
+        "server.mvnDeps": {},
+        "server.bomMvnDeps": {},
+        "server.mandatoryMvnDeps": {
+          "server.scalaLibraryMvnDeps": {},
+          "server.mandatoryMvnDeps.super.javalib.JavaModule": {}
+        },
+        "server.scalaVersion": {},
+        "server.compileMvnDeps": {},
+        "common.mvnDeps": {},
+        "server.checkGradleModules": {},
+        "common.platformSuffix": {},
+        "server.platformSuffix": {},
+        "server.runMvnDeps": {}
+      },
+      "server.runClasspath.super.RunModule": {},
+      "server.transitiveLocalClasspath": {
+        "common.localClasspath": {
+          "common.localRunClasspath": {
+            "common.compile": {
+              "common.javacOptions": {},
+              "common.scalacPluginClasspath": {
+                "common.scalacPluginMvnDeps": {}
+              },
+              "common.allScalacOptions": {
+                "common.scalacOptions": {},
+                "common.mandatoryScalacOptions": {},
+                "common.enablePluginScalacOptions": {}
+              },
+              "common.allSourceFiles": {
+                "common.allSources": {
+                  "common.generatedSources": {},
+                  "common.sources": {}
+                }
+              },
+              "common.javaHome": {
+                "common.jvmId": {},
+                "common.jvmIndexVersion": {}
+              },
+              "common.zincIncrementalCompilation": {},
+              "common.upstreamCompileOutput": {},
+              "common.zincReportCachedProblems": {},
+              "common.zincAuxiliaryClassFileExtensions": {
+                "common.zincAuxiliaryClassFileExtensions.super.javalib.JavaModule": {}
+              },
+              "common.mandatoryJavacOptions": {},
+              "common.scalaCompilerClasspath": {
+                "common.checkGradleModules": {}
+              },
+              "common.compileClasspath": {
+                "common.resolvedMvnDeps": {
+                  "common.artifactTypes": {}
+                }
+              }
+            },
+            "common.resources": {},
+            "common.localRunClasspath.super.RunModule": {}
+          },
+          "common.localCompileClasspath": {
+            "common.compileResources": {},
+            "common.unmanagedClasspath": {}
+          }
+        }
+      },
+      "server.localClasspath": {
+        "server.localCompileClasspath": {
+          "server.unmanagedClasspath": {},
+          "server.compileResources": {}
+        },
+        "server.localRunClasspath": {
+          "server.compile": {
+            "server.javacOptions": {},
+            "server.allScalacOptions": {
+              "server.mandatoryScalacOptions": {},
+              "server.scalacOptions": {},
+              "server.enablePluginScalacOptions": {}
+            },
+            "server.zincAuxiliaryClassFileExtensions": {
+              "server.zincAuxiliaryClassFileExtensions.super.javalib.JavaModule": {}
+            },
+            "server.allSourceFiles": {
+              "server.allSources": {
+                "server.sources": {},
+                "server.generatedSources": {}
+              }
+            },
+            "server.compileClasspath": {
+              "server.resolvedMvnDeps": {}
+            },
+            "server.zincReportCachedProblems": {},
+            "server.zincIncrementalCompilation": {},
+            "mill.javalib.JvmWorkerModule.internalWorker": {
+              "mill.javalib.JvmWorkerModule.repositories": {},
+              "mill.javalib.JvmWorkerModule.classpath": {},
+              "mill.javalib.JvmWorkerModule.zincLogDebug": {},
+              "mill.javalib.JvmWorkerModule.checkGradleModules": {}
+            },
+            "server.scalaCompilerClasspath": {},
+            "server.upstreamCompileOutput": {},
+            "server.scalacPluginClasspath": {
+              "server.scalacPluginMvnDeps": {}
+            },
+            "server.mandatoryJavacOptions": {}
+          },
+          "server.resources": {
+            "server.resources.super.mill.javalib.JavaModule": {},
+            "client.fullLinkJS": {
+              "client.finalMainClassOpt": {
+                "client.allLocalMainClasses": {},
+                "client.mainClass": {}
+              },
+              "client.runClasspath": {
+                "client.transitiveLocalClasspath": {
+                  "common.js.localClasspath": {
+                    "common.js.localRunClasspath": {
+                      "common.js.localRunClasspath.super.RunModule": {},
+                      "common.js.resources": {},
+                      "common.js.compile": {
+                        "common.js.allScalacOptions": {
+                          "common.js.mandatoryScalacOptions": {
+                            "common.js.mandatoryScalacOptions.super.scalalib.ScalaModule": {}
+                          },
+                          "common.js.scalacOptions": {},
+                          "common.js.enablePluginScalacOptions": {}
+                        },
+                        "common.js.zincIncrementalCompilation": {},
+                        "common.js.javaHome": {
+                          "common.js.jvmId": {},
+                          "common.js.jvmIndexVersion": {}
+                        },
+                        "common.js.upstreamCompileOutput": {},
+                        "common.js.scalacPluginClasspath": {
+                          "common.js.scalacPluginMvnDeps": {
+                            "common.js.scalacPluginMvnDeps.super.scalalib.ScalaModule": {}
+                          }
+                        },
+                        "common.js.mandatoryJavacOptions": {},
+                        "common.js.scalaOrganization": {},
+                        "common.js.zincReportCachedProblems": {},
+                        "common.js.allSourceFiles": {
+                          "common.js.allSources": {
+                            "common.js.generatedSources": {},
+                            "common.js.sources": {}
+                          }
+                        },
+                        "common.js.javacOptions": {},
+                        "common.js.scalaCompilerClasspath": {
+                          "common.js.checkGradleModules": {}
+                        },
+                        "common.js.zincAuxiliaryClassFileExtensions": {
+                          "common.js.zincAuxiliaryClassFileExtensions.super.scalalib.ScalaModule": {
+                            "common.js.zincAuxiliaryClassFileExtensions.super.javalib.JavaModule": {}
+                          }
+                        },
+                        "common.js.compileClasspath": {
+                          "common.js.resolvedMvnDeps": {
+                            "common.js.artifactTypes": {}
+                          }
+                        }
+                      }
+                    },
+                    "common.js.localCompileClasspath": {
+                      "common.js.unmanagedClasspath": {},
+                      "common.js.compileResources": {}
+                    }
+                  }
+                },
+                "client.resolvedRunMvnDeps": {
+                  "client.runMvnDeps": {},
+                  "client.mandatoryMvnDeps": {
+                    "client.mandatoryMvnDeps.super.scalalib.ScalaModule": {
+                      "client.mandatoryMvnDeps.super.javalib.JavaModule": {},
+                      "client.scalaLibraryMvnDeps": {
+                        "client.scalaLibraryMvnDeps.super.scalalib.ScalaModule": {}
+                      }
+                    }
+                  },
+                  "common.js.platformSuffix": {
+                    "common.js.artifactScalaJSVersion": {
+                      "common.js.scalaJSBinaryVersion": {},
+                      "common.js.crossFullScalaJSVersion": {}
+                    }
+                  },
+                  "client.depManagement": {},
+                  "client.artifactTypes": {},
+                  "client.platformSuffix": {
+                    "client.artifactScalaJSVersion": {
+                      "client.crossFullScalaJSVersion": {}
+                    }
+                  },
+                  "client.scalaOrganization": {},
+                  "client.transitiveCoursierProjects": {
+                    "common.js.runMvnDeps": {},
+                    "common.js.depManagement": {},
+                    "common.js.bomMvnDeps": {},
+                    "common.js.transitiveCoursierProjects": {},
+                    "common.js.compileMvnDeps": {},
+                    "common.js.mandatoryMvnDeps": {
+                      "common.js.mandatoryMvnDeps.super.scalalib.ScalaModule": {
+                        "common.js.scalaLibraryMvnDeps": {
+                          "common.js.scalaLibraryMvnDeps.super.scalalib.ScalaModule": {}
+                        },
+                        "common.js.mandatoryMvnDeps.super.javalib.JavaModule": {}
+                      },
+                      "common.js.scalaJSVersion": {}
+                    }
+                  },
+                  "common.js.scalaVersion": {},
+                  "client.bomMvnDeps": {},
+                  "client.repositories": {},
+                  "client.mvnDeps": {},
+                  "client.checkGradleModules": {},
+                  "common.js.repositories": {},
+                  "client.compileMvnDeps": {},
+                  "client.scalaVersion": {}
+                },
+                "client.localClasspath": {
+                  "client.localRunClasspath": {
+                    "client.compile": {
+                      "client.mandatoryJavacOptions": {},
+                      "client.javaHome": {
+                        "client.jvmId": {},
+                        "client.jvmIndexVersion": {}
+                      },
+                      "client.compileClasspath": {
+                        "client.resolvedMvnDeps": {}
+                      },
+                      "client.upstreamCompileOutput": {},
+                      "client.allSourceFiles": {
+                        "client.allSources": {
+                          "client.sources": {},
+                          "client.generatedSources": {}
+                        }
+                      },
+                      "client.zincAuxiliaryClassFileExtensions": {
+                        "client.zincAuxiliaryClassFileExtensions.super.scalalib.ScalaModule": {
+                          "client.zincAuxiliaryClassFileExtensions.super.javalib.JavaModule": {}
+                        }
+                      },
+                      "client.zincIncrementalCompilation": {},
+                      "client.javacOptions": {},
+                      "client.scalaCompilerClasspath": {},
+                      "client.zincReportCachedProblems": {},
+                      "client.allScalacOptions": {
+                        "client.mandatoryScalacOptions": {
+                          "client.mandatoryScalacOptions.super.scalalib.ScalaModule": {}
+                        },
+                        "client.scalacOptions": {},
+                        "client.enablePluginScalacOptions": {}
+                      },
+                      "client.scalacPluginClasspath": {
+                        "client.scalacPluginMvnDeps": {
+                          "client.scalacPluginMvnDeps.super.scalalib.ScalaModule": {}
+                        }
+                      }
+                    },
+                    "client.localRunClasspath.super.RunModule": {}
+                  },
+                  "client.localCompileClasspath": {
+                    "client.compileResources": {},
+                    "client.unmanagedClasspath": {}
+                  }
+                },
+                "client.runClasspath.super.RunModule": {}
+              },
+              "mill.scalajslib.worker.ScalaJSWorkerExternalModule.scalaJSWorker": {},
+              "client.scalaJSOptimizer": {},
+              "client.scalaJSExperimentalUseWebAssembly": {},
+              "client.esFeatures": {
+                "client.scalaJSVersion": {}
+              },
+              "client.scalaJSSourceMap": {},
+              "client.scalaJSMinify": {},
+              "client.scalaJSToolsClasspath": {
+                "client.scalaJSLinkerClasspath": {
+                  "client.scalaJSBinaryVersion": {},
+                  "client.scalaJSJsEnvMvnDeps": {
+                    "client.jsEnvConfig": {}
+                  }
+                },
+                "client.scalaJSWorkerClasspath": {
+                  "client.scalaJSWorkerVersion": {}
+                }
+              },
+              "client.moduleKind": {},
+              "client.moduleSplitStyle": {},
+              "client.scalaJSOutputPatterns": {},
+              "client.scalaJSImportMap": {}
+            },
+            "client.resources": {}
+          },
+          "server.localRunClasspath.super.RunModule": {}
+        }
+      }
+    }
+  }
+}

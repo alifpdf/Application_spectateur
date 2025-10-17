@@ -1,0 +1,38 @@
+{
+    "workerCache": {
+        "mill.javalib.JvmWorkerModule.internalWorker": {
+            "identityHashCode": 928930185,
+            "inputHash": -1410443110
+        },
+        "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorker": {
+            "identityHashCode": 500292595,
+            "inputHash": 1329474562
+        },
+        "mill.scalajslib.worker.ScalaJSWorkerExternalModule.scalaJSWorker": {
+            "identityHashCode": 1889222444,
+            "inputHash": -904429810
+        },
+        "mill.javalib.classgraph.ClassgraphWorkerModule.classgraphWorkerClassloader": {
+            "identityHashCode": 393420293,
+            "inputHash": -238697736
+        }
+    },
+    "evalWatched": [
+        "/home/alif/alif/common/compile-resources",
+        "/home/alif/alif/common/src",
+        "/home/alif/alif/client/resources",
+        "/home/alif/alif/server/compile-resources",
+        "/home/alif/alif/server/src",
+        "/home/alif/alif/client/compile-resources",
+        "/home/alif/alif/server/resources",
+        "/home/alif/alif/common/src",
+        "/home/alif/alif/common/resources",
+        "/home/alif/alif/common/compile-resources",
+        "/home/alif/alif/common/resources",
+        "/home/alif/alif/client/src"
+    ],
+    "moduleWatched": [],
+    "classLoaderIdentity": null,
+    "runClasspath": [],
+    "runClasspathHash": 473519988
+}

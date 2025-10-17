@@ -1,0 +1,19 @@
+{
+    "value": [
+        "qref:v1:7478c4fd:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-sbt-test-adapter_2.13/1.20.1/scalajs-sbt-test-adapter_2.13-1.20.1.jar",
+        "qref:v1:5bf92fc4:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-linker_2.13/1.20.1/scalajs-linker_2.13-1.20.1.jar",
+        "qref:v1:ad38acd5:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-env-nodejs_2.13/1.4.0/scalajs-env-nodejs_2.13-1.4.0.jar",
+        "qref:v1:af4b3a3d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar",
+        "qref:v1:3ed2ed17:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+        "qref:v1:697fe536:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-js-envs_2.13/1.4.0/scalajs-js-envs_2.13-1.4.0.jar",
+        "qref:v1:86e7cf41:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-linker-interface_2.13/1.20.1/scalajs-linker-interface_2.13-1.20.1.jar",
+        "qref:v1:6e65f985:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-ir_2.13/1.20.1/scalajs-ir_2.13-1.20.1.jar",
+        "qref:v1:c7c9d93b:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/javascript/closure-compiler/v20220202/closure-compiler-v20220202.jar",
+        "qref:v1:103d4e96:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parallel-collections_2.13/0.2.0/scala-parallel-collections_2.13-0.2.0.jar",
+        "qref:v1:bb32bf88:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar",
+        "qref:v1:4b60e544:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-logging_2.13/1.1.1/scalajs-logging_2.13-1.1.1.jar",
+        "qref:v1:1b22f728:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/guava/guava/18.0/guava-18.0.jar"
+    ],
+    "valueHash": -2084394547,
+    "inputsHash": -2062449074
+}

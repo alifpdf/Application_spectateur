@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/home/alif/alif/mill-build/compile-resources",
+        "ref:v0:c984eca8:/home/alif/alif/mill-build/resources",
+        "ref:v0:c3020719:/home/alif/alif/out/mill-bsp-out/mill-build/compile.dest/transformed-classes"
+    ],
+    "valueHash": -1366981319,
+    "inputsHash": -1105832447
+}

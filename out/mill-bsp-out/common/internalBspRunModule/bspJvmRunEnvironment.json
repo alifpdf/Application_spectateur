@@ -1,0 +1,26 @@
+{
+    "value": [
+        [
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_3/4.3.2/upickle_3-4.3.2.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_3/4.3.2/ujson_3-4.3.2.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_3/4.3.2/upack_3-4.3.2.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_3/4.3.2/upickle-implicits_3-4.3.2.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_3/4.3.2/upickle-core_3-4.3.2.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.1.1/geny_3-1.1.1.jar",
+            "file:///home/alif/alif/common/compile-resources",
+            "file:///home/alif/alif/common/resources",
+            "file:///home/alif/alif/out/mill-bsp-out/common/compile.dest/classes/"
+        ],
+        [],
+        "file:///home/alif/alif/",
+        {
+            "MILL_WORKSPACE_ROOT": "/home/alif/alif"
+        },
+        null,
+        []
+    ],
+    "valueHash": 1913706360,
+    "inputsHash": -1791341999
+}

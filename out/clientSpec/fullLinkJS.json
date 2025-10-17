@@ -1,0 +1,15 @@
+{
+    "value": {
+        "publicModules": [
+            {
+                "moduleID": "main",
+                "jsFileName": "main.js",
+                "sourceMapName": "main.js.map",
+                "moduleKind": "ESModule"
+            }
+        ],
+        "dest": "ref:v0:87926094:/home/alif/alif/out/clientSpec/fullLinkJS.dest"
+    },
+    "valueHash": 2046145399,
+    "inputsHash": 1652941149
+}

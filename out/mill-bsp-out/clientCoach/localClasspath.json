@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/home/alif/alif/clientCoach/compile-resources",
+        "ref:v0:c984eca8:/home/alif/alif/clientCoach/resources",
+        "ref:v0:c984eca8:/home/alif/alif/out/mill-bsp-out/clientCoach/compile.dest/classes"
+    ],
+    "valueHash": 303904942,
+    "inputsHash": -994596350
+}

@@ -1,0 +1,12 @@
+{
+    "value": {
+        "$type": "DestPath",
+        "subPath": "",
+        "segments": [
+            "clientCoach",
+            "compiledClassesAndSemanticDbFiles"
+        ]
+    },
+    "valueHash": -546458870,
+    "inputsHash": -422101230
+}

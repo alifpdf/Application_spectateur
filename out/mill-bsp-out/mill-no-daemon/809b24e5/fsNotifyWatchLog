@@ -1,0 +1,304 @@
+[watched-paths:unfiltered] /home/alif/alif/build.mill
+/home/alif/alif/mill-build/compile-resources
+/home/alif/alif/mill-build/resources
+/home/alif/alif/mill-build/src
+[watched-paths:filtered] /home/alif/alif
+/home/alif/alif/build.mill
+/home/alif/alif/mill-build
+/home/alif/alif/mill-build/compile-resources
+/home/alif/alif/mill-build/resources
+/home/alif/alif/mill-build/src
+[filter] (shouldBeWatched=true) /home/alif/alif
+[filter] (shouldBeWatched=false) /home/alif/alif/.bsp
+[filter] (shouldBeWatched=false) /home/alif/alif/.metals
+[filter] (shouldBeWatched=false) /home/alif/alif/.vscode
+[filter] (shouldBeWatched=false) /home/alif/alif/client
+[filter] (shouldBeWatched=false) /home/alif/alif/common
+[filter] (shouldBeWatched=false) /home/alif/alif/out
+[filter] (shouldBeWatched=false) /home/alif/alif/server
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.mv.db
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-active-command
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-chrome-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-chrome-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-dependency-tree.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/allSources.json
+/home/alif/alif/out/allScalacOptions.json
+/home/alif/alif/out/artifactTypes.json
+/home/alif/alif/out/allSourceFiles.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/checkGradleModules.json
+/home/alif/alif/out/bomMvnDeps.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/client
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/common
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/compile.dest
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/compileResources.json
+/home/alif/alif/out/compileMvnDeps.json
+/home/alif/alif/out/compileClasspath.json
+/home/alif/alif/out/compile.json
+/home/alif/alif/out/compile.log
+/home/alif/alif/out/depManagement.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/jvmIndexVersion.json
+/home/alif/alif/out/javacOptions.json
+/home/alif/alif/out/localCompileClasspath.json
+/home/alif/alif/out/javaHome.json
+/home/alif/alif/out/enablePluginScalacOptions.json
+/home/alif/alif/out/jvmId.json
+/home/alif/alif/out/generatedSources.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mandatoryMvnDeps.json
+/home/alif/alif/out/mandatoryJavacOptions.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mandatoryScalacOptions.json
+/home/alif/alif/out/mandatoryMvnDeps.super
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mvnDeps.json
+/home/alif/alif/out/platformSuffix.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/repositories.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/resolve.json
+/home/alif/alif/out/resolvedMvnDeps.json
+/home/alif/alif/out/runMvnDeps.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/scalaCompilerClasspath.json
+/home/alif/alif/out/scalaVersion.json
+/home/alif/alif/out/scalaOrganization.json
+/home/alif/alif/out/scalaLibraryMvnDeps.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/scalacPluginMvnDeps.json
+/home/alif/alif/out/scalacPluginClasspath.json
+/home/alif/alif/out/scalacOptions.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/server
+/home/alif/alif/out/sources.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/transitiveCoursierProjects.json
+/home/alif/alif/out/unmanagedClasspath.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/upstreamCompileOutput.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/visualizePlan.json
+/home/alif/alif/out/zincIncrementalCompilation.json
+/home/alif/alif/out/visualize.dest
+/home/alif/alif/out/zincAuxiliaryClassFileExtensions.super
+/home/alif/alif/out/visualizePlan.dest
+/home/alif/alif/out/visualize.json
+/home/alif/alif/out/zincAuxiliaryClassFileExtensions.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/zincReportCachedProblems.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/clean.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/clean.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-invalidation-tree.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-profile.json
+/home/alif/alif/out/mill-runner-state.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-chrome-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-chrome-profile.json
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/out/mill-active-command
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log
+[changed-paths] (hasWatchedPath=false) /home/alif/alif/.metals/metals.log

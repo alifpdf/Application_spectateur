@@ -1,0 +1,9 @@
+{
+    "value": {
+        "worker": "mill.scalajslib.worker.ScalaJSWorkerExternalModule.scalaJSWorker",
+        "toString": "mill.scalajslib.worker.ScalaJSWorker@2a006111",
+        "inputsHash": 1757774446
+    },
+    "valueHash": 1757774446,
+    "inputsHash": 1757774446
+}

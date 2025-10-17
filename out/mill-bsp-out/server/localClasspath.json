@@ -1,0 +1,11 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/home/alif/alif/server/compile-resources",
+        "ref:v0:ed8be70d:/home/alif/alif/server/resources",
+        "ref:v0:c984eca8:/home/alif/alif/client/resources",
+        "ref:v0:1ce30fa7:/home/alif/alif/out/mill-bsp-out/client/fullLinkJS.dest",
+        "ref:v0:01814743:/home/alif/alif/out/mill-bsp-out/server/compile.dest/classes"
+    ],
+    "valueHash": -1833376064,
+    "inputsHash": 1344194009
+}

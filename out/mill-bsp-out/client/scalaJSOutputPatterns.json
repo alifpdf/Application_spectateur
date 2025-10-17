@@ -1,0 +1,11 @@
+{
+    "value": {
+        "jsFile": "%s.js",
+        "sourceMapFile": "%s.js.map",
+        "moduleName": "./%s.js",
+        "jsFileURI": "%s.js",
+        "sourceMapURI": "%s.js.map"
+    },
+    "valueHash": -1243429551,
+    "inputsHash": -670981438
+}

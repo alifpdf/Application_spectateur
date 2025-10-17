@@ -1,0 +1,10 @@
+{
+    "value": {
+        "allowBigIntsForLongs": false,
+        "avoidClasses": true,
+        "avoidLetsAndConsts": true,
+        "esVersion": "ES2015"
+    },
+    "valueHash": 1410807089,
+    "inputsHash": -469562498
+}

@@ -1,0 +1,21 @@
+{
+    "value": {
+        "resolvedDepsSources": [
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_sjs1_3/3.7.3/scala3-library_sjs1_3-3.7.3-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.13/1.20.1/scalajs-library_2.13-1.20.1-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs1_3/2.8.1/scalajs-dom_sjs1_3-2.8.1-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_sjs1_3/4.3.2/upickle_sjs1_3-4.3.2-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-javalib/1.20.1/scalajs-javalib-1.20.1-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-scalalib_2.13/2.13.16%252B1.20.1/scalajs-scalalib_2.13-2.13.16%252B1.20.1-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_sjs1_3/4.3.2/ujson_sjs1_3-4.3.2-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_sjs1_3/4.3.2/upack_sjs1_3-4.3.2-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_sjs1_3/4.3.2/upickle-implicits_sjs1_3-4.3.2-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_sjs1_3/4.3.2/upickle-core_sjs1_3-4.3.2-sources.jar",
+            "file:///home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_sjs1_3/1.1.1/geny_sjs1_3-1.1.1-sources.jar"
+        ],
+        "unmanagedClasspath": []
+    },
+    "valueHash": 630198262,
+    "inputsHash": 270554199
+}

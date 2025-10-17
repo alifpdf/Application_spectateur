@@ -1,0 +1,18 @@
+{
+    "value": [
+        "qref:v1:3882cc2c:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_sjs1_3/3.7.3/scala3-library_sjs1_3-3.7.3.jar",
+        "qref:v1:450d6119:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.13/1.20.1/scalajs-library_2.13-1.20.1.jar",
+        "qref:v1:2540b681:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_sjs1_3/4.3.2/upickle_sjs1_3-4.3.2.jar",
+        "qref:v1:af4b3a3d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar",
+        "qref:v1:476eda0d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-javalib/1.20.1/scalajs-javalib-1.20.1.jar",
+        "qref:v1:fefb0fb3:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-scalalib_2.13/2.13.16%2B1.20.1/scalajs-scalalib_2.13-2.13.16%2B1.20.1.jar",
+        "qref:v1:878970ba:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_sjs1_3/4.3.2/ujson_sjs1_3-4.3.2.jar",
+        "qref:v1:89efe377:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_sjs1_3/4.3.2/upack_sjs1_3-4.3.2.jar",
+        "qref:v1:e088fc55:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_sjs1_3/4.3.2/upickle-implicits_sjs1_3-4.3.2.jar",
+        "qref:v1:2a6f3acc:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_sjs1_3/4.3.2/upickle-core_sjs1_3-4.3.2.jar",
+        "qref:v1:c7205dd2:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_sjs1_3/1.1.1/geny_sjs1_3-1.1.1.jar",
+        "ref:v0:c984eca8:/home/alif/alif/common/compile-resources"
+    ],
+    "valueHash": -1654754927,
+    "inputsHash": 1669368231
+}

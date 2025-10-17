@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:1483d934:/home/alif/alif/server/src/fr/cyu/robafis/Session.scala",
+        "ref:v0:1f6b65e3:/home/alif/alif/server/src/fr/cyu/robafis/MinimalApplication.scala",
+        "ref:v0:cf8c7f62:/home/alif/alif/server/src/fr/cyu/robafis/Model.scala"
+    ],
+    "valueHash": 188615820,
+    "inputsHash": 1584738939
+}

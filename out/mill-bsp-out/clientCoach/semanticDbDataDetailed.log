@@ -1,0 +1,32 @@
+[info] compiling 3 Scala sources to /home/alif/alif/out/mill-bsp-out/clientCoach/semanticDbDataDetailed.dest/classes ...
+[error] -- [E007] Type Mismatch Error: /home/alif/alif/clientCoach/src/fr/cyu/robafis/Main.scala:15:5 
+[error] 15 |    (0, Cmd.None)
+[error]    |     ^
+[error]    |     Found:    (0 : Int)
+[error]    |     Required: fr.cyu.robafis.Model
+[error]    |
+[error]    | longer explanation available when compiling with `-explain`
+[error] -- [E008] Not Found Error: /home/alif/alif/clientCoach/src/fr/cyu/robafis/Main.scala:19:13 
+[error] 19 |    case Msg.Incr(n) => (model+n, Cmd.None)
+[error]    |         ^^^^^^^^
+[error]    |         value Incr is not a member of object fr.cyu.robafis.Msg
+[error] -- [E008] Not Found Error: /home/alif/alif/clientCoach/src/fr/cyu/robafis/Main.scala:19:30 
+[error] 19 |    case Msg.Incr(n) => (model+n, Cmd.None)
+[error]    |                         ^^^^^^
+[error]    |value + is not a member of fr.cyu.robafis.Model, but could be made available as an extension method.
+[error]    |
+[error]    |One of the following imports might make progress towards fixing the problem:
+[error]    |
+[error]    |  import scala.math.Fractional.Implicits.infixFractionalOps
+[error]    |  import scala.math.Integral.Implicits.infixIntegralOps
+[error]    |  import scala.math.Numeric.Implicits.infixNumericOps
+[error]    |
+[error] -- [E008] Not Found Error: /home/alif/alif/clientCoach/src/fr/cyu/robafis/Main.scala:23:23 
+[error] 23 |    button(onClick(Msg.Incr(2)))("+2"),
+[error]    |                   ^^^^^^^^
+[error]    |                 value Incr is not a member of object fr.cyu.robafis.Msg
+[error] -- [E008] Not Found Error: /home/alif/alif/clientCoach/src/fr/cyu/robafis/Main.scala:24:23 
+[error] 24 |    button(onClick(Msg.Incr(5)))("+5"),
+[error]    |                   ^^^^^^^^
+[error]    |                 value Incr is not a member of object fr.cyu.robafis.Msg
+[error] 5 errors found

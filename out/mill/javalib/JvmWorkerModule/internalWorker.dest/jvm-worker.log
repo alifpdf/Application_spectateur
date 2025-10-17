@@ -1,0 +1,287 @@
+[2025-10-17T14:46:33.239159636|req#0] [33mZincCompileMixed[39m(
+  upstreamCompileOutput = [33mList[39m(
+    [33mCompilationResult[39m(
+      analysisFile = /home/alif/alif/out/common/compile.dest/zinc,
+      classes = [33mPathRef[39m(
+        path = /home/alif/alif/out/common/compile.dest/classes,
+        quick = [32mfalse[39m,
+        sig = [32m-1592687490[39m,
+        revalidate = Never
+      )
+    )
+  ),
+  sources = [33mList[39m(
+    /home/alif/alif/server/src/fr/cyu/robafis/Session.scala,
+    /home/alif/alif/server/src/fr/cyu/robafis/MinimalApplication.scala,
+    /home/alif/alif/server/src/fr/cyu/robafis/Model.scala
+  ),
+  compileClasspath = [33mList[39m(
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/cask_3/0.10.2/cask_3-0.10.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-lib_3/0.11.5/os-lib_3-0.11.5.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_3/4.3.2/upickle_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/undertow/undertow-core/2.3.18.Final/undertow-core-2.3.18.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/cask-util_3/0.10.2/cask-util_3-0.10.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.1.1/geny_3-1.1.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/os-zip/0.11.5/os-zip-0.11.5.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_3/4.3.2/ujson_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_3/4.3.2/upack_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_3/4.3.2/upickle-implicits_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/xnio/xnio-api/3.8.16.Final/xnio-api-3.8.16.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/threads/jboss-threads/3.5.0.Final/jboss-threads-3.5.0.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/sourcecode_3/0.4.2/sourcecode_3-0.4.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/pprint_3/0.9.0/pprint_3-0.9.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/castor_3/0.3.0/castor_3-0.3.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_3/4.3.2/upickle-core_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/wildfly/common/wildfly-common/1.6.0.Final/wildfly-common-1.6.0.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/wildfly/client/wildfly-client-config/1.0.1.Final/wildfly-client-config-1.0.1.Final.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/fansi_3/0.5.0/fansi_3-0.5.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar,
+    /home/alif/alif/common/compile-resources,
+    /home/alif/alif/out/common/compile.dest/classes,
+    /home/alif/alif/server/compile-resources
+  ),
+  javacOptions = [33mJavaCompilerOptions[39m([33mList[39m()),
+  scalaVersion = [32m"3.7.3"[39m,
+  scalaOrganization = [32m"org.scala-lang"[39m,
+  scalacOptions = [33mList[39m(),
+  compilerClasspath = [33mList[39m(
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/3.7.3/scala3-compiler_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1358204289[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1825197459[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-interfaces/3.7.3/scala3-interfaces-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m28098965[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/tasty-core_3/3.7.3/tasty-core_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1091708726[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-asm/9.8.0-scala-1/scala-asm-9.8.0-scala-1.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1752481582[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.10.7/compiler-interface-1.10.7.jar,
+      quick = [32mtrue[39m,
+      sig = [32m798404019[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.29.0/jline-reader-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-118267892[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.29.0/jline-terminal-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1828548736[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jni/3.29.0/jline-terminal-jni-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1438754518[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-1354024387[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.10.7/util-interface-1.10.7.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-1572612622[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-native/3.29.0/jline-native-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-544967958[39m,
+      revalidate = Once
+    )
+  ),
+  scalacPluginClasspath = [33mList[39m(),
+  incrementalCompilation = [32mtrue[39m,
+  auxiliaryClassFileExtensions = [33mList[39m([32m"tasty"[39m)
+)
+[2025-10-17T14:46:33.240642238|req#1] [33mZincCompileMixed[39m(
+  upstreamCompileOutput = [33mList[39m(
+    [33mCompilationResult[39m(
+      analysisFile = /home/alif/alif/out/common/js/compile.dest/zinc,
+      classes = [33mPathRef[39m(
+        path = /home/alif/alif/out/common/js/compile.dest/classes,
+        quick = [32mfalse[39m,
+        sig = [32m1819948066[39m,
+        revalidate = Never
+      )
+    )
+  ),
+  sources = [33mList[39m(
+    /home/alif/alif/client/src/fr/cyu/robafis/BluetoothJS.scala,
+    /home/alif/alif/client/src/fr/cyu/robafis/Msg.scala,
+    /home/alif/alif/client/src/fr/cyu/robafis/Main.scala,
+    /home/alif/alif/client/src/fr/cyu/robafis/BtState.scala,
+    /home/alif/alif/client/src/fr/cyu/robafis/Model.scala
+  ),
+  compileClasspath = [33mList[39m(
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_sjs1_3/3.7.3/scala3-library_sjs1_3-3.7.3.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.13/1.20.1/scalajs-library_2.13-1.20.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/indigoengine/tyrian_sjs1_3/0.14.0/tyrian_sjs1_3-0.14.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/indigoengine/tyrian-io_sjs1_3/0.14.0/tyrian-io_sjs1_3-0.14.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_sjs1_3/4.3.2/upickle_sjs1_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-javalib/1.20.1/scalajs-javalib-1.20.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-scalalib_2.13/2.13.16%2B1.20.1/scalajs-scalalib_2.13-2.13.16%2B1.20.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/indigoengine/tyrian-tags_sjs1_3/0.14.0/tyrian-tags_sjs1_3-0.14.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_sjs1_3/3.6.1/cats-effect-kernel_sjs1_3-3.6.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/co/fs2/fs2-core_sjs1_3/3.12.0/fs2-core_sjs1_3-3.12.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/github/buntec/scala-js-snabbdom_sjs1_3/0.2.0-M3/scala-js-snabbdom_sjs1_3-0.2.0-M3.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs1_3/2.8.0/scalajs-dom_sjs1_3-2.8.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect_sjs1_3/3.6.1/cats-effect_sjs1_3-3.6.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_sjs1_3/4.3.2/ujson_sjs1_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_sjs1_3/4.3.2/upack_sjs1_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_sjs1_3/4.3.2/upickle-implicits_sjs1_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_sjs1_3/2.11.0/cats-core_sjs1_3-2.11.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scodec/scodec-bits_sjs1_3/1.1.38/scodec-bits_sjs1_3-1.1.38.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-effect-std_sjs1_3/3.6.1/cats-effect-std_sjs1_3-3.6.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-mtl_sjs1_3/1.3.1/cats-mtl_sjs1_3-1.3.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scala-js-macrotask-executor_sjs1_3/1.1.1/scala-js-macrotask-executor_sjs1_3-1.1.1.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_sjs1_3/4.3.2/upickle-core_sjs1_3-4.3.2.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_sjs1_3/2.11.0/cats-kernel_sjs1_3-2.11.0.jar,
+    /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_sjs1_3/1.1.1/geny_sjs1_3-1.1.1.jar,
+    /home/alif/alif/common/compile-resources,
+    /home/alif/alif/out/common/js/compile.dest/classes,
+    /home/alif/alif/client/compile-resources
+  ),
+  javacOptions = [33mJavaCompilerOptions[39m([33mList[39m()),
+  scalaVersion = [32m"3.7.3"[39m,
+  scalaOrganization = [32m"org.scala-lang"[39m,
+  scalacOptions = [33mList[39m([32m"-scalajs"[39m),
+  compilerClasspath = [33mList[39m(
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/3.7.3/scala3-compiler_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1358204289[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_sjs1_3/3.7.3/scala3-library_sjs1_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m948096044[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-interfaces/3.7.3/scala3-interfaces-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m28098965[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1825197459[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/tasty-core_3/3.7.3/tasty-core_3-3.7.3.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1091708726[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-asm/9.8.0-scala-1/scala-asm-9.8.0-scala-1.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1752481582[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.10.7/compiler-interface-1.10.7.jar,
+      quick = [32mtrue[39m,
+      sig = [32m798404019[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.29.0/jline-reader-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-118267892[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.29.0/jline-terminal-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1828548736[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jni/3.29.0/jline-terminal-jni-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1438754518[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.13/1.19.0/scalajs-library_2.13-1.19.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-272982733[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-1354024387[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.10.7/util-interface-1.10.7.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-1572612622[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-native/3.29.0/jline-native-3.29.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-544967958[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-javalib/1.19.0/scalajs-javalib-1.19.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m1983851333[39m,
+      revalidate = Once
+    ),
+    [33mPathRef[39m(
+      path = /home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-scalalib_2.13/2.13.16%2B1.19.0/scalajs-scalalib_2.13-2.13.16%2B1.19.0.jar,
+      quick = [32mtrue[39m,
+      sig = [32m-1126443411[39m,
+      revalidate = Once
+    )
+  ),
+  scalacPluginClasspath = [33mList[39m(),
+  incrementalCompilation = [32mtrue[39m,
+  auxiliaryClassFileExtensions = [33mList[39m([32m"tasty"[39m, [32m"sjsir"[39m)
+)
+[2025-10-17T14:46:33.242138516|req#0] Using local Zinc instance
+[2025-10-17T14:46:33.242138576|req#1] Using local Zinc instance
+[2025-10-17T14:46:40.453015320|req#0] Compilation took 7207ms
+[2025-10-17T14:46:42.754461351|req#1] Compilation took 9509ms

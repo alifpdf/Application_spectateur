@@ -1,0 +1,29 @@
+{
+    "value": [
+        "qref:v1:6cca4d93:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar",
+        "qref:v1:ce17fc45:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/cask_3/0.10.2/cask_3-0.10.2.jar",
+        "qref:v1:af4b3a3d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar",
+        "qref:v1:f269a729:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/io/undertow/undertow-core/2.3.18.Final/undertow-core-2.3.18.Final.jar",
+        "qref:v1:a9fbd041:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_3/4.0.2/upickle_3-4.0.2.jar",
+        "qref:v1:61d4d577:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/cask-util_3/0.10.2/cask-util_3-0.10.2.jar",
+        "qref:v1:b5b6c5fd:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.4.3.Final/jboss-logging-3.4.3.Final.jar",
+        "qref:v1:b4026d84:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/xnio/xnio-api/3.8.16.Final/xnio-api-3.8.16.Final.jar",
+        "qref:v1:3d3fb99d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jboss/threads/jboss-threads/3.5.0.Final/jboss-threads-3.5.0.Final.jar",
+        "qref:v1:34ff35cd:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_3/4.0.2/ujson_3-4.0.2.jar",
+        "qref:v1:a4d1ef6d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_3/4.0.2/upack_3-4.0.2.jar",
+        "qref:v1:92b1747c:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_3/4.0.2/upickle-implicits_3-4.0.2.jar",
+        "qref:v1:17627422:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/sourcecode_3/0.4.2/sourcecode_3-0.4.2.jar",
+        "qref:v1:a2dd1b8e:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/pprint_3/0.9.0/pprint_3-0.9.0.jar",
+        "qref:v1:3bce0519:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.1.1/geny_3-1.1.1.jar",
+        "qref:v1:03aa4948:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/castor_3/0.3.0/castor_3-0.3.0.jar",
+        "qref:v1:fa4fa30f:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar",
+        "qref:v1:6a7e1a95:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/wildfly/common/wildfly-common/1.6.0.Final/wildfly-common-1.6.0.Final.jar",
+        "qref:v1:b7ffa41d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/wildfly/client/wildfly-client-config/1.0.1.Final/wildfly-client-config-1.0.1.Final.jar",
+        "qref:v1:6886fcb2:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_3/4.0.2/upickle-core_3-4.0.2.jar",
+        "qref:v1:7ad32e2a:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/fansi_3/0.5.0/fansi_3-0.5.0.jar",
+        "qref:v1:2cef3494:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar",
+        "ref:v0:c984eca8:/home/alif/alif/compile-resources"
+    ],
+    "valueHash": 1902035541,
+    "inputsHash": 1918702978
+}

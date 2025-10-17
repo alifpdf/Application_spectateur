@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:57776451:/home/alif/alif/build.mill",
+        "ref:v0:c984eca8:/home/alif/alif/mill-build/src",
+        "ref:v0:e43bda69:/home/alif/alif/out/mill-bsp-out/mill-build/generatedScriptSources.dest/support"
+    ],
+    "valueHash": -451667378,
+    "inputsHash": -738297396
+}

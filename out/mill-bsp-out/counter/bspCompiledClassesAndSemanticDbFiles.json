@@ -1,0 +1,12 @@
+{
+    "value": {
+        "$type": "DestPath",
+        "subPath": "",
+        "segments": [
+            "counter",
+            "compiledClassesAndSemanticDbFiles"
+        ]
+    },
+    "valueHash": 174632883,
+    "inputsHash": -1443901401
+}

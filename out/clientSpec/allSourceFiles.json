@@ -1,0 +1,9 @@
+{
+    "value": [
+        "ref:v0:304a3fca:/home/alif/alif/clientSpec/src/fr/cyu/robafis/Msg.scala",
+        "ref:v0:085a736b:/home/alif/alif/clientSpec/src/fr/cyu/robafis/Main.scala",
+        "ref:v0:92140d3c:/home/alif/alif/clientSpec/src/fr/cyu/robafis/Model.scala"
+    ],
+    "valueHash": 1033514584,
+    "inputsHash": 174942039
+}

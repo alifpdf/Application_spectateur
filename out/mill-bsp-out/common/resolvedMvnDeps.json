@@ -1,0 +1,14 @@
+{
+    "value": [
+        "qref:v1:6cca4d93:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.7.3/scala3-library_3-3.7.3.jar",
+        "qref:v1:e66066ff:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle_3/4.3.2/upickle_3-4.3.2.jar",
+        "qref:v1:af4b3a3d:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.16/scala-library-2.13.16.jar",
+        "qref:v1:1d5bc32e:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/ujson_3/4.3.2/ujson_3-4.3.2.jar",
+        "qref:v1:ada7081e:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upack_3/4.3.2/upack_3-4.3.2.jar",
+        "qref:v1:71d9bd0c:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-implicits_3/4.3.2/upickle-implicits_3-4.3.2.jar",
+        "qref:v1:c9b05420:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/upickle-core_3/4.3.2/upickle-core_3-4.3.2.jar",
+        "qref:v1:3bce0519:/home/alif/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/geny_3/1.1.1/geny_3-1.1.1.jar"
+    ],
+    "valueHash": -750067677,
+    "inputsHash": 1601963202
+}

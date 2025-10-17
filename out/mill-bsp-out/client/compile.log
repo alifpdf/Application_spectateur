@@ -1,0 +1,7 @@
+[info] compiling 1 Scala source to /home/alif/alif/out/mill-bsp-out/client/compile.dest/classes ...
+[warn] -- [E030] Match case Unreachable Warning: /home/alif/alif/client/src/fr/cyu/robafis/Main.scala:243:11 
+[warn] 243 |      case Msg.Bluetooth(_) =>
+[warn]     |           ^^^^^^^^^^^^^^^^
+[warn]     |           Unreachable case
+[warn] one warning found
+[info] done compiling

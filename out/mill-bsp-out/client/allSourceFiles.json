@@ -1,0 +1,11 @@
+{
+    "value": [
+        "ref:v0:d276c038:/home/alif/alif/client/src/fr/cyu/robafis/BluetoothJS.scala",
+        "ref:v0:6365d759:/home/alif/alif/client/src/fr/cyu/robafis/Msg.scala",
+        "ref:v0:00d7dd58:/home/alif/alif/client/src/fr/cyu/robafis/Main.scala",
+        "ref:v0:f00d4917:/home/alif/alif/client/src/fr/cyu/robafis/BtState.scala",
+        "ref:v0:355c56c5:/home/alif/alif/client/src/fr/cyu/robafis/Model.scala"
+    ],
+    "valueHash": 959909892,
+    "inputsHash": 1901511756
+}

@@ -1,0 +1,14 @@
+{
+    "value": [
+        [
+            "file:///home/alif/alif/build.mill",
+            "file:///home/alif/alif/mill-build/src"
+        ],
+        [
+            "file:///home/alif/alif/out/mill-bsp-out/mill-build/generatedScriptSources.dest/support/",
+            "file:///home/alif/alif/out/mill-bsp-out/mill-build/compileGeneratedSources.dest/"
+        ]
+    ],
+    "valueHash": -784824908,
+    "inputsHash": 1557729247
+}

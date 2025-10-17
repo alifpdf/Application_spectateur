@@ -1,0 +1,11 @@
+{
+  "client.compile": {
+    "client.localRunClasspath": {
+      "client.allLocalMainClasses": {
+        "client.internalBspJavaModule.bspBuildTargetScalaMainClasses": {}
+      }
+    }
+  },
+  "common.js.resolvedMvnDeps": {},
+  "client.resolvedMvnDeps": {}
+}

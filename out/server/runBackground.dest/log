@@ -1,0 +1,521 @@
+[2025-10-14T11:42:55.017215753] 108301: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:42:55.035794493] 108301: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:42:55.036570084] 108301: Lock acquired
+[2025-10-14T11:42:55.037056364] 108301: Old process PID: Optional.empty
+[2025-10-14T11:42:55.03871542] 108301: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:42:55.095847124] 108301: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:43:31.882357415] 108864: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:43:31.900175533] 108864: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:43:31.92609157] 108301: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "108864"
+[2025-10-14T11:43:32.258246201] 108864: Lock acquired
+[2025-10-14T11:43:32.258864384] 108864: Old process PID: Optional[108301]
+[2025-10-14T11:43:32.260349852] 108864: Waiting for old process to terminate
+[2025-10-14T11:43:32.26050586] 108864: Old process was already terminated.
+[2025-10-14T11:43:32.260635926] 108864: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:43:32.317151013] 108864: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:07.703306794] 109389: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:07.737617664] 109389: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:07.762321347] 108864: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "109389"
+[2025-10-14T11:44:08.093033736] 109389: Lock acquired
+[2025-10-14T11:44:08.093833665] 109389: Old process PID: Optional[108864]
+[2025-10-14T11:44:08.095905184] 109389: Waiting for old process to terminate
+[2025-10-14T11:44:08.096320569] 109389: Old process was already terminated.
+[2025-10-14T11:44:08.096691816] 109389: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:08.155026895] 109389: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:16.347659665] 109659: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:16.36389609] 109659: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:16.371151593] 109389: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "109659"
+[2025-10-14T11:44:16.695221662] 109659: Lock acquired
+[2025-10-14T11:44:16.695845571] 109659: Old process PID: Optional[109389]
+[2025-10-14T11:44:16.697201527] 109659: Waiting for old process to terminate
+[2025-10-14T11:44:16.697368931] 109659: Old process was already terminated.
+[2025-10-14T11:44:16.697549132] 109659: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:16.753982815] 109659: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:34.675009075] 110001: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:34.693696551] 110001: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:34.740841514] 109659: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "110001"
+[2025-10-14T11:44:35.065765638] 110001: Lock acquired
+[2025-10-14T11:44:35.066370423] 110001: Old process PID: Optional[109659]
+[2025-10-14T11:44:35.067764307] 110001: Waiting for old process to terminate
+[2025-10-14T11:44:35.067948919] 110001: Old process was already terminated.
+[2025-10-14T11:44:35.06811361] 110001: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:35.124610058] 110001: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:47.142605647] 110325: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:47.199778818] 110325: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:47.218728821] 110001: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "110325"
+[2025-10-14T11:44:47.63628728] 110325: Lock acquired
+[2025-10-14T11:44:47.637168378] 110325: Old process PID: Optional[110001]
+[2025-10-14T11:44:47.641221027] 110325: Waiting for old process to terminate
+[2025-10-14T11:44:47.641565388] 110325: Old process was already terminated.
+[2025-10-14T11:44:47.641799143] 110325: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:47.71863647] 110325: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:47.87338901] 110361: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:47.944449177] 110361: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:47.956410913] 110325: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "110361"
+[2025-10-14T11:44:48.02296922] 110361: Lock acquired
+[2025-10-14T11:44:48.023867796] 110361: Old process PID: Optional[110325]
+[2025-10-14T11:44:48.031209384] 110361: Waiting for old process to terminate
+[2025-10-14T11:44:48.031700691] 110361: Old process was already terminated.
+[2025-10-14T11:44:48.032448031] 110361: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:48.10924639] 110361: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:44:51.119774722] 110524: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:44:51.142782703] 110524: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:44:51.152632816] 110361: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "110524"
+[2025-10-14T11:44:51.477935317] 110524: Lock acquired
+[2025-10-14T11:44:51.47876213] 110524: Old process PID: Optional[110361]
+[2025-10-14T11:44:51.481221275] 110524: Waiting for old process to terminate
+[2025-10-14T11:44:51.481452671] 110524: Old process was already terminated.
+[2025-10-14T11:44:51.481660753] 110524: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:44:51.539577565] 110524: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:45:16.785871446] 110921: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:45:16.804353502] 110921: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:45:16.826911074] 110524: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "110921"
+[2025-10-14T11:45:17.155944398] 110921: Lock acquired
+[2025-10-14T11:45:17.15652472] 110921: Old process PID: Optional[110524]
+[2025-10-14T11:45:17.157937156] 110921: Waiting for old process to terminate
+[2025-10-14T11:45:17.158118955] 110921: Old process was already terminated.
+[2025-10-14T11:45:17.158271427] 110921: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:45:17.214659528] 110921: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:45:54.771649415] 111423: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:45:54.826720856] 111423: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:45:54.877401332] 110921: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "111423"
+[2025-10-14T11:45:54.996443692] 111459: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:45:55.020691443] 111459: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:45:55.209092679] 111423: Lock acquired
+[2025-10-14T11:45:55.209964771] 111423: Old process PID: Optional[110921]
+[2025-10-14T11:45:55.212195085] 111423: Waiting for old process to terminate
+[2025-10-14T11:45:55.212424112] 111423: Old process was already terminated.
+[2025-10-14T11:45:55.212584968] 111423: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:45:55.2709327] 111423: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "111459"
+[2025-10-14T11:45:55.285168147] 111459: Lock acquired
+[2025-10-14T11:45:55.285829777] 111459: Old process PID: Optional[111423]
+[2025-10-14T11:45:55.287681397] 111459: Waiting for old process to terminate
+[2025-10-14T11:45:55.287972386] 111459: Old process was already terminated.
+[2025-10-14T11:45:55.28828174] 111459: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:45:55.350056753] 111459: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:46:02.785942002] 111677: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:46:02.804906257] 111677: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:46:02.820899877] 111459: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "111677"
+[2025-10-14T11:46:03.149250803] 111677: Lock acquired
+[2025-10-14T11:46:03.149843431] 111677: Old process PID: Optional[111459]
+[2025-10-14T11:46:03.151203059] 111677: Waiting for old process to terminate
+[2025-10-14T11:46:03.151358602] 111677: Old process was already terminated.
+[2025-10-14T11:46:03.151504515] 111677: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:46:03.209032765] 111677: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:46:12.068284683] 111940: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:46:12.094354374] 111940: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:46:12.131995337] 111677: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "111940"
+[2025-10-14T11:46:12.459181261] 111940: Lock acquired
+[2025-10-14T11:46:12.459928092] 111940: Old process PID: Optional[111677]
+[2025-10-14T11:46:12.46177966] 111940: Waiting for old process to terminate
+[2025-10-14T11:46:12.462009974] 111940: Old process was already terminated.
+[2025-10-14T11:46:12.462196347] 111940: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:46:12.520577687] 111940: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:46:25.558462142] 112178: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:46:25.628921827] 112178: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:46:25.641023455] 111940: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "112178"
+[2025-10-14T11:46:25.988615706] 112178: Lock acquired
+[2025-10-14T11:46:25.989674845] 112178: Old process PID: Optional[111940]
+[2025-10-14T11:46:25.993780301] 112178: Waiting for old process to terminate
+[2025-10-14T11:46:25.994180646] 112178: Old process was already terminated.
+[2025-10-14T11:46:25.994441484] 112178: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:46:26.071660344] 112178: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:49:37.773926655] 115201: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:49:37.796927043] 115201: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:49:37.833576102] 112178: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "115201"
+[2025-10-14T11:49:38.159032571] 115201: Lock acquired
+[2025-10-14T11:49:38.159873667] 115201: Old process PID: Optional[112178]
+[2025-10-14T11:49:38.161748481] 115201: Waiting for old process to terminate
+[2025-10-14T11:49:38.16194124] 115201: Old process was already terminated.
+[2025-10-14T11:49:38.162091399] 115201: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:49:38.220499102] 115201: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:08.792115599] 115916: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:08.817129761] 115916: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:08.853875743] 115201: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "115916"
+[2025-10-14T11:50:09.188898948] 115916: Lock acquired
+[2025-10-14T11:50:09.197227529] 115916: Old process PID: Optional[115201]
+[2025-10-14T11:50:09.201622658] 115916: Waiting for old process to terminate
+[2025-10-14T11:50:09.202339468] 115916: Old process was already terminated.
+[2025-10-14T11:50:09.202878041] 115916: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:09.263430727] 115916: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:26.931941746] 116253: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:26.996739402] 116253: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:27.009656896] 115916: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "116253"
+[2025-10-14T11:50:27.359139299] 116253: Lock acquired
+[2025-10-14T11:50:27.360475381] 116253: Old process PID: Optional[115916]
+[2025-10-14T11:50:27.371694646] 116253: Waiting for old process to terminate
+[2025-10-14T11:50:27.372131363] 116253: Old process was already terminated.
+[2025-10-14T11:50:27.372435743] 116253: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:27.516364153] 116253: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:28.756007451] 116401: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:28.801668171] 116401: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:28.837765208] 116253: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "116401"
+[2025-10-14T11:50:29.196396875] 116401: Lock acquired
+[2025-10-14T11:50:29.20076619] 116401: Old process PID: Optional[116253]
+[2025-10-14T11:50:29.207167394] 116401: Waiting for old process to terminate
+[2025-10-14T11:50:29.20771672] 116401: Old process was already terminated.
+[2025-10-14T11:50:29.208068516] 116401: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:29.317264817] 116401: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:30.821580617] 116559: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:30.863214229] 116559: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:30.907873426] 116401: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "116559"
+[2025-10-14T11:50:31.265909434] 116559: Lock acquired
+[2025-10-14T11:50:31.266894494] 116559: Old process PID: Optional[116401]
+[2025-10-14T11:50:31.269803245] 116559: Waiting for old process to terminate
+[2025-10-14T11:50:31.270229197] 116559: Old process was already terminated.
+[2025-10-14T11:50:31.270527917] 116559: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:31.343829087] 116559: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:32.641436569] 116711: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:32.664183106] 116711: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:32.709338337] 116559: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "116711"
+[2025-10-14T11:50:33.040283786] 116711: Lock acquired
+[2025-10-14T11:50:33.041113714] 116711: Old process PID: Optional[116559]
+[2025-10-14T11:50:33.043313735] 116711: Waiting for old process to terminate
+[2025-10-14T11:50:33.043554161] 116711: Old process was already terminated.
+[2025-10-14T11:50:33.043738192] 116711: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:33.103724122] 116711: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:50:34.681000115] 116860: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:50:34.699582925] 116860: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:50:34.728892882] 116711: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "116860"
+[2025-10-14T11:50:35.056291404] 116860: Lock acquired
+[2025-10-14T11:50:35.057089208] 116860: Old process PID: Optional[116711]
+[2025-10-14T11:50:35.058869879] 116860: Waiting for old process to terminate
+[2025-10-14T11:50:35.059091955] 116860: Old process was already terminated.
+[2025-10-14T11:50:35.059269746] 116860: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:50:35.117164746] 116860: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:51:22.367858503] 117886: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:51:22.388217422] 117886: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:51:22.389023247] 116860: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "117886"
+[2025-10-14T11:51:22.721459699] 117886: Lock acquired
+[2025-10-14T11:51:22.722103425] 117886: Old process PID: Optional[116860]
+[2025-10-14T11:51:22.724073976] 117886: Waiting for old process to terminate
+[2025-10-14T11:51:22.724292757] 117886: Old process was already terminated.
+[2025-10-14T11:51:22.724464834] 117886: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:51:22.784226666] 117886: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:51:57.478665078] 118725: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:51:57.585126187] 118725: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:51:57.615017159] 117886: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "118725"
+[2025-10-14T11:51:58.037276534] 118725: Lock acquired
+[2025-10-14T11:51:58.038291281] 118725: Old process PID: Optional[117886]
+[2025-10-14T11:51:58.066743676] 118725: Waiting for old process to terminate
+[2025-10-14T11:51:58.067470742] 118725: Old process was already terminated.
+[2025-10-14T11:51:58.06785594] 118725: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:51:58.152244554] 118725: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:52:00.36713887] 118879: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:52:00.403865959] 118879: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:52:00.43114519] 118725: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "118879"
+[2025-10-14T11:52:00.783693242] 118879: Lock acquired
+[2025-10-14T11:52:00.785212643] 118879: Old process PID: Optional[118725]
+[2025-10-14T11:52:00.794771226] 118879: Waiting for old process to terminate
+[2025-10-14T11:52:00.795197765] 118879: Old process was already terminated.
+[2025-10-14T11:52:00.79612313] 118879: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:52:00.876539377] 118879: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:52:10.854510893] 119143: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:52:10.91183586] 119143: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:52:10.939487203] 118879: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "119143"
+[2025-10-14T11:52:11.070683124] 119185: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:52:11.103371102] 119185: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:52:11.294624374] 119143: Lock acquired
+[2025-10-14T11:52:11.295533624] 119143: Old process PID: Optional[118879]
+[2025-10-14T11:52:11.298433271] 119143: Waiting for old process to terminate
+[2025-10-14T11:52:11.29874234] 119143: Old process was already terminated.
+[2025-10-14T11:52:11.29901181] 119143: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:52:11.361174218] 119143: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "119185"
+[2025-10-14T11:52:11.380136283] 119185: Lock acquired
+[2025-10-14T11:52:11.381405704] 119185: Old process PID: Optional[119143]
+[2025-10-14T11:52:11.389312838] 119185: Waiting for old process to terminate
+[2025-10-14T11:52:11.38994989] 119185: Old process was already terminated.
+[2025-10-14T11:52:11.390330998] 119185: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:52:11.471688875] 119185: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:52:26.721670471] 119701: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:52:26.751100653] 119701: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:52:26.790364142] 119185: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "119701"
+[2025-10-14T11:52:27.134453683] 119701: Lock acquired
+[2025-10-14T11:52:27.135301402] 119701: Old process PID: Optional[119185]
+[2025-10-14T11:52:27.137142882] 119701: Waiting for old process to terminate
+[2025-10-14T11:52:27.137392418] 119701: Old process was already terminated.
+[2025-10-14T11:52:27.137628642] 119701: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:52:27.196389288] 119701: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:52:45.377856636] 120016: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:52:45.415660641] 120016: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:52:45.444163158] 119701: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "120016"
+[2025-10-14T11:52:45.771326338] 120016: Lock acquired
+[2025-10-14T11:52:45.772069742] 120016: Old process PID: Optional[119701]
+[2025-10-14T11:52:45.773730636] 120016: Waiting for old process to terminate
+[2025-10-14T11:52:45.7739558] 120016: Old process was already terminated.
+[2025-10-14T11:52:45.77414123] 120016: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:52:45.830591279] 120016: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:55:17.165048872] 122925: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:55:17.238641277] 122925: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:55:17.254101218] 120016: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "122925"
+[2025-10-14T11:55:17.607566775] 122925: Lock acquired
+[2025-10-14T11:55:17.608293465] 122925: Old process PID: Optional[120016]
+[2025-10-14T11:55:17.610310163] 122925: Waiting for old process to terminate
+[2025-10-14T11:55:17.610532377] 122925: Old process was already terminated.
+[2025-10-14T11:55:17.610736736] 122925: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:55:17.66915568] 122925: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:55:30.372240858] 123318: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:55:30.438053644] 123318: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:55:30.448419997] 122925: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "123318"
+[2025-10-14T11:55:30.797185985] 123318: Lock acquired
+[2025-10-14T11:55:30.797725619] 123318: Old process PID: Optional[122925]
+[2025-10-14T11:55:30.799224354] 123318: Waiting for old process to terminate
+[2025-10-14T11:55:30.799414172] 123318: Old process was already terminated.
+[2025-10-14T11:55:30.799569057] 123318: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:55:30.855721167] 123318: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:55:39.924351553] 123584: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:55:39.961480991] 123584: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:55:39.986477708] 123318: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "123584"
+[2025-10-14T11:55:40.336428868] 123584: Lock acquired
+[2025-10-14T11:55:40.337251054] 123584: Old process PID: Optional[123318]
+[2025-10-14T11:55:40.339060754] 123584: Waiting for old process to terminate
+[2025-10-14T11:55:40.33925818] 123584: Old process was already terminated.
+[2025-10-14T11:55:40.339449446] 123584: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:55:40.396186463] 123584: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:55:56.536289046] 123925: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:55:56.565761054] 123925: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:55:56.58874997] 123584: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "123925"
+[2025-10-14T11:55:56.917370909] 123925: Lock acquired
+[2025-10-14T11:55:56.918209166] 123925: Old process PID: Optional[123584]
+[2025-10-14T11:55:56.919954106] 123925: Waiting for old process to terminate
+[2025-10-14T11:55:56.920156692] 123925: Old process was already terminated.
+[2025-10-14T11:55:56.920364115] 123925: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:55:56.977992247] 123925: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:01.619577159] 124151: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:01.663596662] 124151: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:01.687038787] 123925: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "124151"
+[2025-10-14T11:56:02.038653174] 124151: Lock acquired
+[2025-10-14T11:56:02.039782112] 124151: Old process PID: Optional[123925]
+[2025-10-14T11:56:02.054125028] 124151: Waiting for old process to terminate
+[2025-10-14T11:56:02.054761088] 124151: Old process was already terminated.
+[2025-10-14T11:56:02.056633751] 124151: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:02.122125526] 124151: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:05.967276727] 124351: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:06.037229787] 124351: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:06.062757383] 124151: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "124351"
+[2025-10-14T11:56:06.424693218] 124351: Lock acquired
+[2025-10-14T11:56:06.426094646] 124351: Old process PID: Optional[124151]
+[2025-10-14T11:56:06.430810112] 124351: Waiting for old process to terminate
+[2025-10-14T11:56:06.432054715] 124351: Old process was already terminated.
+[2025-10-14T11:56:06.432924512] 124351: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:06.503450243] 124351: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:28.116324207] 125007: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:28.139352017] 125007: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:28.181924215] 124351: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "125007"
+[2025-10-14T11:56:28.515431738] 125007: Lock acquired
+[2025-10-14T11:56:28.516119337] 125007: Old process PID: Optional[124351]
+[2025-10-14T11:56:28.517760303] 125007: Waiting for old process to terminate
+[2025-10-14T11:56:28.517978302] 125007: Old process was already terminated.
+[2025-10-14T11:56:28.518139059] 125007: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:28.575104608] 125007: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:31.991610337] 125190: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:32.019163567] 125190: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:32.054841815] 125007: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "125190"
+[2025-10-14T11:56:32.382369568] 125190: Lock acquired
+[2025-10-14T11:56:32.383199705] 125190: Old process PID: Optional[125007]
+[2025-10-14T11:56:32.384732412] 125190: Waiting for old process to terminate
+[2025-10-14T11:56:32.384908582] 125190: Old process was already terminated.
+[2025-10-14T11:56:32.38505423] 125190: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:32.449950611] 125190: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:44.911037165] 125598: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:44.986647161] 125598: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:45.015323341] 125190: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "125598"
+[2025-10-14T11:56:45.351296374] 125598: Lock acquired
+[2025-10-14T11:56:45.352202117] 125598: Old process PID: Optional[125190]
+[2025-10-14T11:56:45.354064634] 125598: Waiting for old process to terminate
+[2025-10-14T11:56:45.354320967] 125598: Old process was already terminated.
+[2025-10-14T11:56:45.354505753] 125598: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:45.412036004] 125598: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:49.871912203] 125805: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:49.893838636] 125805: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:49.917683367] 125598: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "125805"
+[2025-10-14T11:56:50.251687697] 125805: Lock acquired
+[2025-10-14T11:56:50.252369556] 125805: Old process PID: Optional[125598]
+[2025-10-14T11:56:50.254129199] 125805: Waiting for old process to terminate
+[2025-10-14T11:56:50.254342424] 125805: Old process was already terminated.
+[2025-10-14T11:56:50.254498594] 125805: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:50.314452929] 125805: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:56:58.079112894] 126091: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:56:58.103562259] 126091: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:56:58.126699271] 125805: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "126091"
+[2025-10-14T11:56:58.453890139] 126091: Lock acquired
+[2025-10-14T11:56:58.454669301] 126091: Old process PID: Optional[125805]
+[2025-10-14T11:56:58.456485046] 126091: Waiting for old process to terminate
+[2025-10-14T11:56:58.456634113] 126091: Old process was already terminated.
+[2025-10-14T11:56:58.456766003] 126091: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:56:58.513604945] 126091: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:57:09.278697585] 126489: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:57:09.342013135] 126489: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:57:09.359424478] 126091: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "126489"
+[2025-10-14T11:57:09.746907177] 126489: Lock acquired
+[2025-10-14T11:57:09.750321579] 126489: Old process PID: Optional[126091]
+[2025-10-14T11:57:09.760456811] 126489: Waiting for old process to terminate
+[2025-10-14T11:57:09.760858428] 126489: Old process was already terminated.
+[2025-10-14T11:57:09.766214151] 126489: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:57:09.857646818] 126489: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:57:11.927350188] 126683: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:57:11.955330954] 126683: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:57:11.958594779] 126489: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "126683"
+[2025-10-14T11:57:12.285913248] 126683: Lock acquired
+[2025-10-14T11:57:12.286611413] 126683: Old process PID: Optional[126489]
+[2025-10-14T11:57:12.288154032] 126683: Waiting for old process to terminate
+[2025-10-14T11:57:12.288356458] 126683: Old process was already terminated.
+[2025-10-14T11:57:12.288552489] 126683: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:57:12.350254868] 126683: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:57:45.669158619] 127522: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:57:45.690125597] 127522: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:57:45.700493064] 126683: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "127522"
+[2025-10-14T11:57:46.030041636] 127522: Lock acquired
+[2025-10-14T11:57:46.030723269] 127522: Old process PID: Optional[126683]
+[2025-10-14T11:57:46.03236876] 127522: Waiting for old process to terminate
+[2025-10-14T11:57:46.032590627] 127522: Old process was already terminated.
+[2025-10-14T11:57:46.032768965] 127522: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:57:46.091492788] 127522: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:57:50.109401787] 127722: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:57:50.132738473] 127722: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:57:50.174550689] 127522: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "127722"
+[2025-10-14T11:57:50.500766365] 127722: Lock acquired
+[2025-10-14T11:57:50.501674305] 127722: Old process PID: Optional[127522]
+[2025-10-14T11:57:50.503433292] 127722: Waiting for old process to terminate
+[2025-10-14T11:57:50.503608004] 127722: Old process was already terminated.
+[2025-10-14T11:57:50.503738134] 127722: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:57:50.560397755] 127722: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:58:23.685616354] 128468: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:58:23.707176972] 128468: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:58:23.737892236] 127722: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "128468"
+[2025-10-14T11:58:24.068483252] 128468: Lock acquired
+[2025-10-14T11:58:24.077414337] 128468: Old process PID: Optional[127722]
+[2025-10-14T11:58:24.079456632] 128468: Waiting for old process to terminate
+[2025-10-14T11:58:24.07967902] 128468: Old process was already terminated.
+[2025-10-14T11:58:24.079878788] 128468: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:58:24.139052564] 128468: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:58:52.165061861] 129017: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:58:52.234624186] 129017: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:58:52.278358914] 128468: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "129017"
+[2025-10-14T11:58:52.677639918] 129017: Lock acquired
+[2025-10-14T11:58:52.67863943] 129017: Old process PID: Optional[128468]
+[2025-10-14T11:58:52.687220029] 129017: Waiting for old process to terminate
+[2025-10-14T11:58:52.68758814] 129017: Old process was already terminated.
+[2025-10-14T11:58:52.687876211] 129017: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:58:52.610967338] 129074: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:58:52.740601402] 129074: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:58:52.752036555] 129017: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "129074"
+[2025-10-14T11:58:52.798144617] 129074: Lock acquired
+[2025-10-14T11:58:52.799160953] 129074: Old process PID: Optional[129017]
+[2025-10-14T11:58:52.804300375] 129074: Waiting for old process to terminate
+[2025-10-14T11:58:52.808207875] 129074: Old process was already terminated.
+[2025-10-14T11:58:52.80853462] 129074: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:58:52.884279681] 129074: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T11:59:05.642831684] 129504: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T11:59:05.699856037] 129504: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T11:59:05.702053314] 129074: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "129504"
+[2025-10-14T11:59:06.039397225] 129504: Lock acquired
+[2025-10-14T11:59:06.040254384] 129504: Old process PID: Optional[129074]
+[2025-10-14T11:59:06.042778539] 129504: Waiting for old process to terminate
+[2025-10-14T11:59:06.043067901] 129504: Old process was already terminated.
+[2025-10-14T11:59:06.04340619] 129504: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T11:59:06.109784048] 129504: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:00:07.261594407] 130202: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:07.36902572] 130202: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:07.373864952] 129504: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130202"
+[2025-10-14T12:00:07.600418788] 130252: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:07.72908244] 130252: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:07.787091589] 130202: Lock acquired
+[2025-10-14T12:00:07.78809941] 130202: Old process PID: Optional[129504]
+[2025-10-14T12:00:07.790936562] 130202: Waiting for old process to terminate
+[2025-10-14T12:00:07.791369839] 130202: Old process was already terminated.
+[2025-10-14T12:00:07.791951058] 130202: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:07.856006356] 130202: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130252"
+[2025-10-14T12:00:07.907340707] 130252: Lock acquired
+[2025-10-14T12:00:07.911027217] 130252: Old process PID: Optional[130202]
+[2025-10-14T12:00:07.926436362] 130252: Waiting for old process to terminate
+[2025-10-14T12:00:07.92688647] 130252: Old process was already terminated.
+[2025-10-14T12:00:07.927288139] 130252: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:08.005971797] 130252: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:00:15.219313564] 130557: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:15.260039865] 130557: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:15.28161748] 130252: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130557"
+[2025-10-14T12:00:15.617224643] 130557: Lock acquired
+[2025-10-14T12:00:15.618232765] 130557: Old process PID: Optional[130252]
+[2025-10-14T12:00:15.621477046] 130557: Waiting for old process to terminate
+[2025-10-14T12:00:15.621842078] 130557: Old process was already terminated.
+[2025-10-14T12:00:15.622134314] 130557: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:15.697597747] 130557: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:00:24.580196384] 130728: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:24.602838926] 130728: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:24.637956961] 130557: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130728"
+[2025-10-14T12:00:24.828610959] 130756: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:24.871241991] 130756: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:24.992189143] 130728: Lock acquired
+[2025-10-14T12:00:24.993356746] 130728: Old process PID: Optional[130557]
+[2025-10-14T12:00:24.970197627] 130782: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:24.994193005] 130782: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:24.996323694] 130728: Waiting for old process to terminate
+[2025-10-14T12:00:24.996652606] 130728: Old process was already terminated.
+[2025-10-14T12:00:24.996991824] 130728: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:25.055402053] 130728: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130782"
+[2025-10-14T12:00:25.082132764] 130756: Lock acquired
+[2025-10-14T12:00:25.083907347] 130756: Old process PID: Optional[130728]
+[2025-10-14T12:00:25.088255537] 130756: Waiting for old process to terminate
+[2025-10-14T12:00:25.089085812] 130756: Old process was already terminated.
+[2025-10-14T12:00:25.089775288] 130756: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:25.157961318] 130756: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "130782"
+[2025-10-14T12:00:25.184036271] 130782: Lock acquired
+[2025-10-14T12:00:25.185891807] 130782: Old process PID: Optional[130756]
+[2025-10-14T12:00:25.192846897] 130782: Waiting for old process to terminate
+[2025-10-14T12:00:25.19324166] 130782: Old process was already terminated.
+[2025-10-14T12:00:25.193563624] 130782: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:25.269907716] 130782: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:00:34.7689233] 130997: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:00:34.785543639] 130997: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:00:34.786168649] 130997: Lock acquired
+[2025-10-14T12:00:34.78672002] 130997: Old process PID: Optional[130782]
+[2025-10-14T12:00:34.788262671] 130997: Waiting for old process to terminate
+[2025-10-14T12:00:34.788447463] 130997: Old process was already terminated.
+[2025-10-14T12:00:34.788639234] 130997: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:00:34.846626799] 130997: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:01:22.55276537] 131717: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:01:22.573537795] 131717: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:01:22.617273993] 130997: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "131717"
+[2025-10-14T12:01:22.960555251] 131717: Lock acquired
+[2025-10-14T12:01:22.962101357] 131717: Old process PID: Optional[130997]
+[2025-10-14T12:01:22.966095285] 131717: Waiting for old process to terminate
+[2025-10-14T12:01:22.966630487] 131717: Old process was already terminated.
+[2025-10-14T12:01:22.96712795] 131717: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:01:23.033609122] 131717: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:02:18.254941007] 132577: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:02:18.292945869] 132577: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:02:18.315376247] 131717: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "132577"
+[2025-10-14T12:02:18.648047047] 132577: Lock acquired
+[2025-10-14T12:02:18.656927712] 132577: Old process PID: Optional[131717]
+[2025-10-14T12:02:18.659634329] 132577: Waiting for old process to terminate
+[2025-10-14T12:02:18.659962229] 132577: Old process was already terminated.
+[2025-10-14T12:02:18.660187147] 132577: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:02:18.719127777] 132577: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:03:06.377688199] 133143: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:03:06.396175801] 133143: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:03:06.441525322] 132577: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "133143"
+[2025-10-14T12:03:06.778119534] 133143: Lock acquired
+[2025-10-14T12:03:06.787899835] 133143: Old process PID: Optional[132577]
+[2025-10-14T12:03:06.796040175] 133143: Waiting for old process to terminate
+[2025-10-14T12:03:06.796615746] 133143: Old process was already terminated.
+[2025-10-14T12:03:06.797145265] 133143: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:03:06.862163555] 133143: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:11:06.739418919] 138505: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:11:06.775419067] 138505: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:11:06.825437753] 133143: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "138505"
+[2025-10-14T12:11:07.164507193] 138505: Lock acquired
+[2025-10-14T12:11:07.173431335] 138505: Old process PID: Optional[133143]
+[2025-10-14T12:11:07.176582603] 138505: Waiting for old process to terminate
+[2025-10-14T12:11:07.177044362] 138505: Old process was already terminated.
+[2025-10-14T12:11:07.177385554] 138505: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:11:07.240383862] 138505: Running main method fr.cyu.robafis.MinimalApplication with args []
+[2025-10-14T12:11:35.973240082] 138936: Starting. Writing my PID to /home/alif/alif/out/server/runBackground.dest/newest-pid
+[2025-10-14T12:11:36.011179015] 138936: Acquiring lock on /home/alif/alif/out/server/runBackground.dest/lock
+[2025-10-14T12:11:36.044104733] 138505: New process started, exiting. Token file (/home/alif/alif/out/server/runBackground.dest/newest-pid) contents: "138936"
+[2025-10-14T12:11:36.408277633] 138936: Lock acquired
+[2025-10-14T12:11:36.412371331] 138936: Old process PID: Optional[138505]
+[2025-10-14T12:11:36.415386186] 138936: Waiting for old process to terminate
+[2025-10-14T12:11:36.415948131] 138936: Old process was already terminated.
+[2025-10-14T12:11:36.416340267] 138936: Writing my PID to /home/alif/alif/out/server/runBackground.dest/currently-running-pid
+[2025-10-14T12:11:36.493318522] 138936: Running main method fr.cyu.robafis.MinimalApplication with args []
