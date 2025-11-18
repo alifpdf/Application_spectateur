@@ -18,3 +18,6 @@ case class Model(counter: Int, sessions: Map[Int, Session], nextSessionId: Int,r
 
   def sendToAll(msg: ServerMsg): Unit =
     sessions.values.foreach(session => session.connection.send(cask.Ws.Text(upickle.write(msg))))
+
+  def removeSession(id: Int): Model = 
+    this.copy(sessions=sessions.removed(id))

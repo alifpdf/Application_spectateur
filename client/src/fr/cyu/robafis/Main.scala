@@ -16,18 +16,6 @@ object Main extends TyrianIOApp[Msg, Model]:
   private inline def css(s: String): Attr[Msg] =
     attr("style") := s
 
-  // ---------- Styles de boutons ----------
-  private val baseBtn =
-    "display:inline-flex; align-items:center; justify-content:center;" +
-      "height:38px; padding:0 12px; border-radius:10px; border:1px solid transparent;" +
-      "font-size:14px; cursor:pointer; user-select:none; transition:all .15s ease;"
-
-  private val primaryBtn = baseBtn + "background:#2563eb; color:#fff; border-color:#2563eb;"
-  private val successBtn = baseBtn + "background:#16a34a; color:#fff; border-color:#16a34a;"
-  private val warnBtn    = baseBtn + "background:#f59e0b; color:#111827; border-color:#f59e0b;"
-  private val dangerBtn  = baseBtn + "background:#ef4444; color:#fff; border-color:#ef4444;"
-  private val outlineBtn = baseBtn + "background:#fff; color:#111827; border-color:#c7cdd4;"
-  private val mutedBtn   = baseBtn + "background:#f3f4f6; color:#9ca3af; border-color:#e5e7eb; cursor:not-allowed;"
 
   // ---------- Router ----------
   def router: Location => Msg =
@@ -64,7 +52,7 @@ object Main extends TyrianIOApp[Msg, Model]:
         (model, model.socket.fold(Cmd.None)(_.publish(write(msg))))
 
       case Msg.Receive(ServerMsg.SetCount(n)) =>
-        (model.copy(counter = n), Cmd.None)
+        (model.copy(lastCounter = model.counter, counter = n), Cmd.None)
 
       case Msg.Receive(ServerMsg.LoggedIn) =>
           (model.copy(isLoggedIn = true), Cmd.None)
@@ -80,6 +68,17 @@ object Main extends TyrianIOApp[Msg, Model]:
 
       case Msg.UpdatePasswordText(text) =>
         (model.copy(coachPassword = text), Cmd.None)
+      case Msg.Tick(nowMs) =>
+        val mAfterMain =
+          model.chronoStart match
+            case Some(start) => model.copy(chronoElapsedMs = nowMs - start)
+            case None        => model
+
+        val mAfterEmergency =
+          mAfterMain.emergencyStart match
+            case Some(estart) => mAfterMain.copy(emergencyElapsedMs = nowMs - estart)
+            case None         => mAfterMain
+        (mAfterEmergency, Cmd.None)
 
       // ---------- Bluetooth ----------
       case Msg.Bluetooth(BluetoothMsg.StartScan) =>
@@ -141,16 +140,72 @@ object Main extends TyrianIOApp[Msg, Model]:
         (model.copy(bt = model.bt.copy(devices = updated, error = None)), Cmd.None)
 
       case Msg.Bluetooth(BluetoothMsg.WriteToSelected(payload)) =>
+        val now = System.currentTimeMillis()
+        def freezeIfRunning(m: Model): Model =
+          m.chronoStart match
+            case Some(start) =>
+              // fige le chrono à l'instant présent
+              m.copy(chronoStart = None, chronoElapsedMs = now - start)
+            case None =>
+              m // déjà à l'arrêt
+        
+        def resumeIfPaused(m: Model): Model =
+          // repart du temps déjà accumulé (chronoElapsedMs)
+          if (m.chronoStart.isEmpty && m.chronoElapsedMs > 0L)
+            m.copy(chronoStart = Some(now - m.chronoElapsedMs))
+          else
+            m
+        
+        // --- helpers pour le chrono d'urgence ---
+        def startEmergency(m: Model): Model =
+          m.copy(emergencyStart = Some(now), emergencyElapsedMs = 0L)
+
+        def stopEmergencyKeepResult(m: Model): Model =
+          m.emergencyStart match
+            case Some(s) => m.copy(emergencyStart = None, emergencyElapsedMs = now - s)
+            case None    => m  // déjà arrêté
+
+        def resetEmergency(m: Model): Model =
+          m.copy(emergencyStart = None, emergencyElapsedMs = 0L)
+
+        
+        val model2 =
+          payload match
+            case "0" => // Démarrer : repart de 0 + on réinitialise le chrono d'urgence
+              resetEmergency(model).copy(chronoStart = Some(now), chronoElapsedMs = 0L, obstacles = Set.empty)
+
+            case "1" => // Arrêt d'urgence : fige le chrono principal + démarre le chrono d'urgence
+              startEmergency(freezeIfRunning(model))
+
+            case "2" => // Arrêt d'urgence : fige le chrono principal + démarre le chrono d'urgence
+              startEmergency(freezeIfRunning(model))
+            
+            case "3" => // Arrêt d'urgence : fige le chrono principal + démarre le chrono d'urgence
+              startEmergency(freezeIfRunning(model))
+            
+            case "4" => // Interruption : fige seulement le chrono principal
+              freezeIfRunning(model)
+
+            case "5" => // Reprise robot : stoppe l'urgence (garde le temps) + reprend le principal
+              resumeIfPaused(stopEmergencyKeepResult(model))
+
+            case "6" => // Autotest : ne touche à aucun chrono ici
+              model
+
+            case _ =>
+              model
+
         model.bt.selectedId match
           case None =>
-            (model, Cmd.emit(Msg.Bluetooth(BluetoothMsg.Error("Aucun appareil sélectionné"))))
+            (model2, Cmd.emit(Msg.Bluetooth(BluetoothMsg.Error("Aucun appareil sélectionné"))))
           case Some(id) =>
             val io: IO[Msg] =
               IO.fromFuture(IO(BluetoothJS.writeTextById(id, payload))).attempt.map {
                 case Right(_)   => Msg.Bluetooth(BluetoothMsg.Wrote(payload))
                 case Left(err)  => Msg.Bluetooth(BluetoothMsg.Error(Option(err.getMessage).getOrElse(err.toString)))
               }
-            (model, Cmd.Run(io))
+            (model2, Cmd.Run(io))
+
 
       case Msg.Bluetooth(BluetoothMsg.Wrote(_)) =>
         (model, Cmd.None)
@@ -176,6 +231,39 @@ object Main extends TyrianIOApp[Msg, Model]:
           if combined.endsWith("\n") then (parts.dropRight(1), "")
           else (parts.dropRight(1), parts.last)
 
+        val autoTestStarted  = completeLines.exists(_.trim == "AUTOTEST: DEBUT")
+        val autoTestFinished = completeLines.exists(_.trim == "AUTOTEST: FIN")
+        val mechEmergency = completeLines.exists(_.trim.equalsIgnoreCase("ARRET URGENCE MECANIQUE"))
+        val emergencyAutoCmd: Cmd[IO, Msg] =
+          if mechEmergency && model.emergencyStart.isEmpty then
+            Cmd.Emit(Msg.Bluetooth(BluetoothMsg.WriteToSelected("2")))
+          else
+            Cmd.None
+        val mechEmergency1 = completeLines.exists(_.trim.equalsIgnoreCase("ARRET URGENCE ELECTRIQUE"))
+        val emergencyAutoCmd1: Cmd[IO, Msg] =
+          if mechEmergency1 && model.emergencyStart.isEmpty then
+            Cmd.Emit(Msg.Bluetooth(BluetoothMsg.WriteToSelected("3")))
+          else
+            Cmd.None
+
+        // 1) Si "DEBUT" reçu -> démarrer le chrono (réinitialisé)
+        val modelAfterStart =
+          if autoTestStarted then
+            model.copy(chronoStart = Some(System.currentTimeMillis()), chronoElapsedMs = 0L)
+          else
+            model
+
+        // 2) Si "FIN" reçu -> figer le chrono (chronoStart -> None, chronoElapsedMs := écoulé)
+        val modelAfterAutoTest =
+          if autoTestFinished && modelAfterStart.chronoStart.isDefined then
+            val now     = System.currentTimeMillis()
+            val elapsed = now - modelAfterStart.chronoStart.get
+            modelAfterStart.copy(chronoStart = None, chronoElapsedMs = elapsed)
+          else
+            modelAfterStart
+
+
+        
         // Log limité à 500 lignes
         val newLog = (model.bt.notifications ++ completeLines.filter(_.nonEmpty)).takeRight(500)
 
@@ -189,6 +277,24 @@ object Main extends TyrianIOApp[Msg, Model]:
               (rr, cc)
           }.lastOption
 
+        
+        val PosRE = raw"""\bPOS\s+(\d+)\s+(\d+)(?:\s+([A-Za-z]))?\b""".r
+        val lastPosWithDirOpt: Option[(Int, Int, Option[String])] =
+          completeLines.collect {
+            case PosRE(r, c, d) =>
+              val rr = math.max(1, math.min(5, r.toInt))
+              val cc = math.max(1, math.min(4, c.toInt))
+              val dirOpt = Option(d).map(_.toUpperCase)
+              (rr, cc, dirOpt)
+          }.lastOption
+
+        //val lastPosOptDetecte: Option[(Int, Int)] = lastPosWithDirOpt.map { case (r, c, _) => (r, c) }
+        val addedObstacle: Option[(Int, Int)] =
+          lastPosWithDirOpt.collect { case (r, c, Some(_)) => (r, c) }
+        val newObstacles: Set[(Int, Int)] =
+           addedObstacle.map(rc => model.obstacles + rc).getOrElse(model.obstacles)
+        
+        //Point reçu du robot
      
         // --- Extraction du dernier POINT n ---
         val Point5 = raw"""\bPOINT5\s+(\d+)\b""".r
@@ -216,11 +322,23 @@ object Main extends TyrianIOApp[Msg, Model]:
             .map((r,c) => Cmd.Emit(Msg.Send(CoachMsg.Coor(r,c))))
             .getOrElse(Cmd.None)
 
-        val m2 = model.copy(bt = model.bt.copy(
-          notifications = newLog,
-          buffer = newBuf,
-          active = lastPosOpt.orElse(model.bt.active)
-        ))
+        val Ballon = raw"""\bBallon\s+(\d+)\b""".r
+        val lastBallonOpt: Option[Int] =
+          completeLines.collect { case Ballon(n) => n.toInt }.lastOption
+        val hasBall = lastBallonOpt match
+          case Some(1) => true
+          case Some(0) => false
+          case _ => model.hasBall
+
+        val m2 = modelAfterAutoTest.copy(
+          hasBall = hasBall,
+          obstacles = newObstacles,
+          bt = model.bt.copy(
+            notifications = newLog,
+            buffer = newBuf,
+            active = lastPosOpt.orElse(model.bt.active)
+          )
+        )
 
         val scrollCmd: Cmd[IO, Msg] = Cmd.Run(
           IO {
@@ -233,67 +351,88 @@ object Main extends TyrianIOApp[Msg, Model]:
         )
 
         // --- Combinaison avec ton scrollCmd existant ---
-        val combinedCmd = Cmd.Batch(scrollCmd, incrCmd5,incrCmd2,changePosCmd)
+        val combinedCmd = Cmd.Batch(scrollCmd, incrCmd5,incrCmd2,changePosCmd,emergencyAutoCmd,emergencyAutoCmd1)
 
         (m2, combinedCmd)
 
       case Msg.Bluetooth(BluetoothMsg.Error(e)) =>
         (model.copy(bt = model.bt.copy(scanning = false, error = Some(e))), Cmd.None)
 
-      case Msg.Bluetooth(_) =>
-        (model, Cmd.None)
+     
+     /* case Msg.Bluetooth(_) =>
+        (model, Cmd.None)*/
+
     }
 
   // ---------- Menu Bluetooth ----------
   private def bluetoothMenu(model: Model): Html[Msg] =
-    details(
-      summary("Bluetooth (Makeblock)"),
+  details(cls := "collapse bg-base-100 border-base-300 border")(
+    summary(cls := "collapse-title font-semibold")("Bluetooth (Makeblock)"),
+    div(cls := "collapse-content")(
+      p(
+        if model.bt.scanning then "Recherche en cours…"
+        else "Sélectionne un appareil Makeblock puis connecte-toi."
+      ),
+      // Boutons d'action
       div(
-        p(
-          if model.bt.scanning then "Recherche en cours…"
-          else "Sélectionne un appareil Makeblock puis connecte-toi."
-        ),
-        div(
-          button(onClick(Msg.Bluetooth(BluetoothMsg.StartScan)))("Rechercher des appareils Makeblock"),
-          text(" "),
-          button(
-            onClick(Msg.Bluetooth(BluetoothMsg.ConnectSelected)),
-            disabled(model.bt.selectedId.isEmpty)
-          )("Se connecter")
-        ),
-        div(
-          label(attr("for") := "bt-device-select")("Appareils : "),
-          select(
-            id := "bt-device-select",
-            onChange(v => Msg.Bluetooth(BluetoothMsg.SelectDevice(v)))
-          )(
-            option(value := "", selected(model.bt.selectedId.isEmpty))("— choisir —") ::
-              model.bt.devices.map { d =>
-                option(
-                  value := d.id,
-                  selected(model.bt.selectedId.contains(d.id))
-                )(s"${d.name} ${if d.connected then "(connecté)" else ""}")
-              }
+        button(
+          cls := "btn btn-primary",
+          onClick(Msg.Bluetooth(BluetoothMsg.StartScan))
+        )("Rechercher des appareils Makeblock"),
+        text(" "),
+        button(
+          cls := "btn btn-primary",
+          onClick(Msg.Bluetooth(BluetoothMsg.ConnectSelected)),
+          disabled(model.bt.selectedId.isEmpty)
+        )("Se connecter") // <-- unique bouton "Se connecter"
+      ),
+      // Sélecteur
+      div(
+        label(attr("for") := "bt-device-select")("Appareils : "),
+        select(
+          id := "bt-device-select",
+          cls := "select",
+          onChange(v => Msg.Bluetooth(BluetoothMsg.SelectDevice(v)))
+        )(
+          option(value := "", selected(model.bt.selectedId.isEmpty))("— choisir —") ::
+            model.bt.devices.map { d =>
+              option(
+                value := d.id,
+                selected(model.bt.selectedId.contains(d.id))
+              )(s"${d.name} ${if d.connected then "(connecté)" else ""}")
+            }
+        )
+      ),
+      // Liste d'infos + actions par appareil
+      ul(
+        model.bt.devices.map { d =>
+          li(
+            span(s"${d.name} [${d.id}] "),
+            if d.connected then
+              button(
+                cls := "btn btn-primary",
+                onClick(Msg.Bluetooth(BluetoothMsg.Disconnect(d.id)))
+              )("Se déconnecter")
+            else
+              // On NE propose plus "Se connecter" ici, juste "Sélectionner"
+              button(
+                cls := "btn",
+                onClick(Msg.Bluetooth(BluetoothMsg.SelectDevice(d.id)))
+              )("Sélectionner")
           )
-        ),
-        ul(
-          model.bt.devices.map { d =>
-            li(
-              span(s"${d.name} [${d.id}] "),
-              if d.connected then
-                button(onClick(Msg.Bluetooth(BluetoothMsg.Disconnect(d.id))))("Se déconnecter")
-              else
-                div(
-                  button(onClick(Msg.Bluetooth(BluetoothMsg.SelectDevice(d.id))))("Sélectionner"),
-                  text(" "),
-                  button(onClick(Msg.Bluetooth(BluetoothMsg.ConnectSelected)))("Se connecter")
-                )
-            )
-          }
-        ),
-        model.bt.error.fold[Html[Msg]](span())(err => p(css("color:red;"))(err))
-      )
+        }
+      ),
+      model.bt.error.fold[Html[Msg]](span())(err => p(cls := "text-error")(err))
     )
+  )
+  // --- Formatage du chrono en mm:ss ---
+  private def fmtMmSs(ms: Long): String =
+    val totalSeconds = ms / 1000
+    val minutes = totalSeconds / 60
+    val seconds = totalSeconds % 60
+    f"$minutes%02d:$seconds%02d"
+
+
 
   // ---------- Vue "terrain simple" : 4 colonnes x 5 lignes, une case active ----------
   private def fieldView(model: Model): Html[Msg] =
@@ -305,174 +444,287 @@ object Main extends TyrianIOApp[Msg, Model]:
     val cells: List[Html[Msg]] =
       (1 to rows).toList.flatMap { r =>
         (1 to cols).toList.map { c =>
-          val isActive = activeOpt.contains((r, c))
+          val isActive   = activeOpt.contains((r, c))
+          val isObstacle = model.obstacles.contains((r, c))
+
           val styleBase =
-            "display:flex; align-items:center; justify-content:center;" +
-            "border:1px solid #d1d5db; border-radius:8px;" +
-            "font-size:14px; user-select:none;"
+            "flex items-center justify-center border border-gray-300 rounded-lg text-sm select-none"
 
           val styleColor =
-            if isActive then "background:#22c55e; color:#fff; font-weight:700;"
-            else "background:#eef2f7; color:#374151;"
+            if isObstacle && isActive then
+              "bg-gradient-to-br from-yellow-300 to-green-500 text-gray-900 font-bold"
+            else if isObstacle then
+              "bg-yellow-300 text-gray-900 font-bold"
+            else if isActive then
+              "bg-green-500 text-white font-bold"
+            else
+              "bg-gray-100 text-gray-700"
 
-          div(css(styleBase + styleColor))(s"R$r-C$c")
+          div(cls := s"$styleBase $styleColor")(s"R$r-C$c")
         }
       }
 
-    div(css("background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; box-shadow:0 1px 2px rgba(0,0,0,.03);"))(
-      h2(css("margin:0 0 12px; font-size:16px;"))("Terrain (26 cm × 18 cm)"),
-      p(css("margin:0 0 10px; color:#6b7280; font-size:12px;"))(
-        text("Envoyez depuis l’Arduino : "),
-        code("POS <row> <col>"),
-        text(" (ex : "),
-        code("POS 3 2"),
-        text("). Lignes 1..5, Colonnes 1..4.")
-      ),
+
+    div(cls := "flex justify-center mt-6")(
+    div(cls := "bg-white border border-gray-200 rounded-xl p-4 shadow-sm w-full max-w-[760px]")(
+      h2(cls := "mb-3 text-base font-semibold text-center")("Terrain (26 cm × 18 cm)"),
       div(
-        css(
-          "display:grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(5, 64px);" +
-          "gap:10px; width:100%; max-width:700px; aspect-ratio: 26 / 18;"
-        )
+        cls := "grid grid-cols-4 [grid-template-rows:repeat(5,64px)] gap-2.5 w-full max-w-[700px] mx-auto aspect-[26/18]"
       )(
         cells*
       )
     )
-
+  )
   // ---------- Vue principale connectée ----------
   def loggedInView(model: Model): Html[Msg] =
-    div(
-      css(
-        "max-width: 980px; margin: 20px auto; padding: 16px;" +
-          "font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;"
-      )
-    )(
-      // Header
-      div(css("display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px;"))(
-        div(
-          h1(css("font-size: 22px; margin: 0; letter-spacing: .2px;"))("Coach • Contrôle matériel"),
-          p(css("margin: 6px 0 0; color: #666; font-size: 13px;"))("Pilote Makeblock via BLE + WebSocket")
-        ),
-        span(
-          css(
-            "padding:6px 10px; border-radius:999px; font-size:12px; " +
-              (if model.bt.selectedId.isEmpty
-               then "background:#fff3cd; color:#664d03; border:1px solid #ffe69c;"
-               else "background:#e7f5ff; color:#0b7285; border:1px solid #a5d8ff;")
-          )
-        )(
-          if model.bt.selectedId.isEmpty then "Aucun appareil sélectionné" else "Appareil sélectionné"
-        )
+  div(
+    // conteneur principal
+    cls := "max-w-[980px] mx-auto mt-5 p-4 font-sans"
+  )(
+
+    // Header
+    div(cls := "flex items-center justify-between gap-3 mb-4")(
+      div(
+        h1(cls := "text-[22px] m-0 tracking-[0.2px]")("Coach • Contrôle matériel"),
       ),
+      span(
+        cls :=
+          (if model.bt.selectedId.isEmpty
+           // Aucun appareil
+           then "px-2.5 py-1.5 rounded-full text-[12px] bg-amber-50 text-amber-900 border border-amber-200"
+           // Appareil sélectionné
+           else "px-2.5 py-1.5 rounded-full text-[12px] bg-sky-50 text-sky-800 border border-sky-200")
+      )(
+        if model.bt.selectedId.isEmpty then "Aucun appareil sélectionné" else "Appareil sélectionné"
+      )
+    ),
 
-      // Carte : Commandes rapides
-      div(css("background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; box-shadow:0 1px 2px rgba(0,0,0,.03); margin-bottom:14px;"))(
-        h2(css("margin:0 0 12px; font-size:16px;"))("Commandes rapides"),
-        div(css("display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px;"))(
-          button(onClick(Msg.Send(CoachMsg.Incr(2))),  css(primaryBtn))("+2"),
-          button(onClick(Msg.Send(CoachMsg.Incr(5))),  css(primaryBtn))("+5"),
-          button(onClick(Msg.Send(CoachMsg.Reset)),    css(dangerBtn)) ("Reset"),
+    // Carte : Commandes rapides
+    // --- Carte : Commandes rapides ---
+    div(cls := "bg-white border border-gray-200 rounded-xl p-4 shadow-sm mb-3.5")(
+      h2(cls := "mb-3 text-base font-semibold")("Commandes rapides"),
 
-          button(
-            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("1"))),
-            disabled(model.bt.selectedId.isEmpty),
-            css(if model.bt.selectedId.isEmpty then mutedBtn else successBtn)
-          )("Envoyer 1"),
+      {
+        // Vérifie si un appareil est sélectionné ET connecté
+        val connected = model.bt.devices.exists(_.connected)
+
+
+        div(cls := "grid [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))] gap-2.5")(
+          button(onClick(Msg.Send(CoachMsg.Incr(2))),  cls := "btn btn-primary")("+2"),
+          button(onClick(Msg.Send(CoachMsg.Incr(5))),  cls := "btn btn-primary")("+5"),
+          button(onClick(Msg.Send(CoachMsg.Incr(3))),  cls := "btn btn-primary")("+3"),
+          button(onClick(Msg.Send(CoachMsg.Reset)),    cls := "btn btn-warning")("Reset"),
+
           button(
             onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("0"))),
-            disabled(model.bt.selectedId.isEmpty),
-            css(if model.bt.selectedId.isEmpty then mutedBtn else warnBtn)
-          )("Envoyer 0"),
+            disabled(!connected), // désactivé si pas connecté
+            cls := "btn btn-success"
+          )("Démarrer"),
+          button(
+            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("1"))),
+            disabled(!connected),
+            cls := "btn btn-error"
+          )("Arrêt d'urgence"),
+
+
           button(
             onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("2"))),
-            disabled(model.bt.selectedId.isEmpty),
-            title := "Lancer les tests matériels (commande '2')",
-            css(if model.bt.selectedId.isEmpty then mutedBtn else primaryBtn)
-          )("Tests (2)"),
+            disabled(!connected),
+            cls := "btn btn-error"
+          )("Arrêt d'urgence mécanique"),
+
+
           button(
-            onClick(Msg.Bluetooth(BluetoothMsg.EnableNotifySelected)),
-            disabled(model.bt.selectedId.isEmpty),
-            css(if model.bt.selectedId.isEmpty then mutedBtn else outlineBtn)
-          )("Activer notifications")
+            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("3"))),
+            disabled(!connected),
+            cls := "btn btn-error"
+          )("Arrêt d'urgence électrique"),
+
+          
+          button(
+            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("4"))),
+            disabled(!connected),
+            title := "Lancer les tests matériels (commande '4')",
+            cls := "btn btn-primary"
+          )("Interruption"),
+          button(
+            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("5"))),
+            disabled(!connected),
+            cls := "btn"
+          )("Reprendre"),
+          button(
+            onClick(Msg.Bluetooth(BluetoothMsg.WriteToSelected("6"))),
+            disabled(!connected),
+            title := "Autotest MegaPi (commande '6')",
+            cls := "btn btn-secondary"
+          )("Autotest")
         )
-      ),
+      }
+    ),
+    div(cls := "mt-3 flex gap-2 justify-end")(
+      {
+        val (label, badgeCls) =
+          if model.chronoStart.isDefined then
+            (s"Chrono : ${fmtMmSs(model.chronoElapsedMs)}",
+            "bg-emerald-50 text-emerald-700 border border-emerald-200")
+          else if model.chronoElapsedMs > 0 then
+            (s"Chrono : ${fmtMmSs(model.chronoElapsedMs)} (arrêt)",
+            "bg-amber-50 text-amber-800 border border-amber-200")
+          else
+            ("Chrono : --:--",
+            "bg-slate-100 text-slate-700 border border-slate-200")
+        span(cls := s"text-[12px] px-2.5 py-1.5 rounded-full $badgeCls")(text(label))
+      },
+      {
+        val (elabel, ebadge) =
+          if model.emergencyStart.isDefined then
+            (s"Urgence : ${fmtMmSs(model.emergencyElapsedMs)}",
+            "bg-rose-50 text-rose-700 border border-rose-200")
+          else if model.emergencyElapsedMs > 0 then
+            (s"Urgence : ${fmtMmSs(model.emergencyElapsedMs)} (figé)",
+            "bg-rose-100 text-rose-800 border border-rose-300")
+          else
+            ("Urgence : --:--",
+            "bg-slate-100 text-slate-700 border border-slate-200")
+        span(cls := s"text-[12px] px-2.5 py-1.5 rounded-full $ebadge")(text(elabel))
+      }
+    ),
 
-      // Carte : Bluetooth
-      div(css("background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; box-shadow:0 1px 2px rgba(0,0,0,.03); margin-bottom:14px;"))(
-        h2(css("margin:0 0 12px; font-size:16px;"))("Bluetooth"),
-        bluetoothMenu(model)
-      ),
 
-      // Carte : Log
-      div(css("background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; box-shadow:0 1px 2px rgba(0,0,0,.03);"))(
-        div(css("display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;"))(
-          h2(css("margin:0; font-size:16px;"))("Retours du module"),
-          span(css("font-size:12px; color:#6b7280;"))(s"${model.bt.notifications.length} ligne(s)")
-        ),
-        div(
-          id := "bt-log",
-          css(
-            "height: 420px; max-height: 55vh; overflow-y: auto;" +
-              "border: 1px dashed #d1d5db; border-radius: 10px; padding: 10px;" +
-              "font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;" +
-              "white-space: pre-wrap; line-height: 1.28; background: #f9fafb;"
-          )
-        )(
-          pre(css("margin:0;"))(model.bt.notifications.mkString("\n"))
-        ),
-        model.bt.error.fold[Html[Msg]](div())(err =>
-          div(css("margin-top:10px; font-size: 13px; padding:8px 10px; border-radius:8px; background:#fff5f5; color:#9f1239; border:1px solid #fecaca;"))(
-            s"Erreur Bluetooth : $err"
-          )
+    // Carte : Bluetooth
+    div(cls := "bg-white border border-gray-200 rounded-xl p-4 shadow-sm mb-3.5")(
+      h2(cls := "mb-3 text-base font-semibold")("Bluetooth"),
+      bluetoothMenu(model)
+    ),
+
+    // Carte : Log
+    div(cls := "bg-white border border-gray-200 rounded-xl p-4 shadow-sm mb-3.5")(
+      div(cls := "flex items-center justify-between mb-2.5")(
+        h2(cls := "m-0 text-base font-semibold")("Retours du module"),
+        span(cls := "text-[12px] text-gray-500")(s"${model.bt.notifications.length} ligne(s)")
+      ),
+      div(
+        id := "bt-log",
+        cls := "h-[420px] max-h-[55vh] overflow-y-auto border border-dashed border-gray-300 rounded-[10px] p-2.5 font-mono whitespace-pre-wrap leading-[1.28] bg-gray-50"
+      )(
+        pre(cls := "m-0")(model.bt.notifications.mkString("\n"))
+      ),
+      model.bt.error.fold[Html[Msg]](div())(err =>
+        div(cls := "mt-2.5 text-[13px] px-2.5 py-2 rounded-lg bg-rose-50 text-rose-800 border border-rose-200")(
+          s"Erreur Bluetooth : $err"
         )
       )
+    ),
 
+    // Carte : État du ballon
+    div(cls := "bg-white border border-gray-200 rounded-xl p-4 shadow-sm mb-3.5")(
+  h2(cls := "mb-3 text-base font-semibold")("État du ballon"),
 
-    )
+  div(
+    cls := s"flex items-center justify-center gap-2 h-20 rounded-xl text-lg font-semibold " +
+      (if model.hasBall then "text-green-600" else "text-red-600")
+  )(
+    // Le petit rond coloré
+    span(
+      cls := s"inline-block w-3 h-3 rounded-full " +
+        (if model.hasBall then "bg-green-600" else "bg-red-600")
+    )(),
+    // Le texte
+    text(if model.hasBall then "Ballon détecté" else "Pas de ballon")
+  )
+)
+)
+  
+
 
   // ---------- Vue mot de passe ----------
   def passwordView(model: Model): Html[Msg] =
-    div(css("max-width: 420px; margin: 60px auto; padding: 20px; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;"))(
-      div(css("background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:20px; box-shadow: 0 1px 2px rgba(0,0,0,.04);"))(
-        h2(css("margin:0 0 10px; font-size:18px;"))("Accès coach"),
-        p(css("margin:0 0 14px; color:#6b7280; font-size:13px;"))(
+    
+    div(cls := "max-w-md mx-auto")(
+    
+      div(cls:="bg-white border border-slate-100 rounded-xl p-7 shadow-md")(
+        h2(cls := "mb-2 text-md")("Accès coach"),
+        p(cls := "mb-3.5 text-gray-500 text-[13px]")(
           text("Saisissez le mot de passe pour débloquer les commandes avancées.")
         ),
         div(
-          label(css("display:block; font-size:13px; margin: 0 0 6px;"))("Mot de passe"),
+          label(cls:="mb-1 text-sm")("Mot de passe"),
           input(
+            cls := "input w-full",
             tpe := "password",
-            onInput(Msg.UpdatePasswordText.apply),
-            css("width:100%; height:40px; padding:0 10px; border-radius:10px; border:1px solid #d1d5db; outline:none;")
+            onInput(Msg.UpdatePasswordText.apply)
           )
         ),
-        div(css("height:10px"))(""),
-        button(onClick(Msg.Send(CoachMsg.Login(model.coachPassword))), css(primaryBtn + "width:100%;"))("Se connecter")
+        div(cls := "h-2.5")(),
+        button(onClick(Msg.Send(CoachMsg.Login(model.coachPassword))), cls := "btn btn-primary w-full")("Se connecter")
       )
     )
 
   // ---------- View ----------
   def view(model: Model): Html[Msg] =
-    div(
-      css("min-height:100vh; background:#f5f7fb;")
-    )(
-      // Barre supérieure avec compteur
-      div(css("max-width:980px; margin:16px auto 0; padding:0 16px; display:flex; justify-content:flex-end;"))(
-        span(css("font-size:12px; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe;"))(
-          s"Compteur : ${model.counter}"
-        )
-      ),
-      if model.isLoggedIn then
-        loggedInView(model)
-      else if model.shouldAskPassword then
-        passwordView(model)
-      else
-        div(css("max-width: 980px; margin: 40px auto; padding: 0 16px; color:#6b7280; font-size:14px;"))(
-          text("Bienvenue — sélectionnez un appareil Bluetooth pour commencer.")
+  div(
+    // fond global
+    cls := "min-h-screen bg-[#f5f7fb]"
+  )(
+    // --- Si connecté ---
+    if model.isLoggedIn then
+      div()(
+        // Compteur à droite
+        div(cls := "max-w-[980px] mx-auto mt-4 px-4 flex justify-end")(
+          span(
+            cls := "text-[12px] px-2.5 py-1.5 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-200"
+          )(
+            s"Compteur : ${model.counter}"
+          )
         ),
-       // ▼▼▼ Terrain simple sous les retours Arduino ▼▼▼
-      div(css("height:16px"))(""),
-      fieldView(model)
-    )
+        // Contenu connecté
+        loggedInView(model),
+        div(cls := "h-4")(),
+        fieldView(model)
+      )
+
+    // --- Si on demande un mot de passe ---
+    else if model.shouldAskPassword then
+      passwordView(model)
+
+    // --- Sinon (pas connecté) ---
+    else {
+      val diff = model.counter - model.lastCounter
+      val messageOpt =
+        if diff == 5 then Some("Essai")
+        else if diff == 2 then Some("Transformation")
+        else if diff == 3 then Some("Pénalité")
+        else None
+
+      div(cls := "max-w-[980px] mx-auto px-4 mt-16")(
+        // bloc centré
+        div(cls := "bg-white border border-gray-200 rounded-2xl p-10 shadow-sm text-center mx-auto max-w-xl space-y-6")(
+
+          // compteur centré
+          div(cls := "flex justify-center")(
+            span(
+              cls := "text-[13px] px-3 py-1.5 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-200"
+            )(
+              s"Compteur : ${model.counter}"
+            )
+          ),
+        
+          // message selon le diff
+          messageOpt.fold[Html[Msg]](div())(msg =>
+            div(cls := "inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium mx-auto")(
+              // petit rond
+              span(cls := "w-2 h-2 rounded-full bg-emerald-500 inline-block")(),
+              text(msg)
+            )
+          )
+        )
+      )
+    }
+
+  )
+
+
+
 
   // ---------- Subscriptions ----------
   def subscriptions(model: Model): Sub[IO, Msg] =
@@ -493,5 +745,15 @@ object Main extends TyrianIOApp[Msg, Model]:
         val detail = Option(ce.detail).map(_.toString).getOrElse("")
         Some(Msg.Bluetooth(BluetoothMsg.NotificationReceived(detail)))
       }
+    import scala.concurrent.duration.*  // <- pour 1.second
 
-    Sub.Batch(wsSub, btNotifySub)
+    val chronoSub: Sub[IO, Msg] = 
+      if model.chronoStart.isDefined || model.emergencyStart.isDefined then
+        Sub.every[IO](1.second).map(d => Msg.Tick(d.getTime().toLong))
+      else
+        Sub.None
+
+
+    
+
+    Sub.Batch(wsSub, btNotifySub,chronoSub)

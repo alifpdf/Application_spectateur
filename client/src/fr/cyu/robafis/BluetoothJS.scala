@@ -60,9 +60,7 @@ object BluetoothJS:
   private def get(id: String): Option[BluetoothDevice] =
     registry.get(id)
 
-  def isWebBluetoothAvailable(): Boolean =
-    val nav = dom.window.navigator.asInstanceOf[js.Dynamic]
-    !js.isUndefined(nav.bluetooth) && nav.bluetooth != null
+    
 
   /** Ouvre le picker filtré Makeblock (namePrefix). */
   def requestMakeblockDevice(
@@ -89,13 +87,26 @@ object BluetoothJS:
   private def ensureConnected(gatt: BluetoothRemoteGATTServer): Future[BluetoothRemoteGATTServer] =
     if gatt.connected then Future.successful(gatt) else gatt.connect().toFuture
 
-  def connectById(id: String): Future[String] =
+  
+  private def withGatt[A](id: String)(
+  f: (BluetoothDevice, BluetoothRemoteGATTServer) => Future[A]): Future[A] =
     get(id) match
+      case None =>
+        Future.failed(new Exception(s"Appareil inconnu: $id"))
       case Some(dev) =>
         dev.gatt.toOption match
-          case Some(gatt) => gatt.connect().toFuture.map(_ => id)
-          case None       => Future.failed(new Exception("GATT non disponible sur cet appareil"))
-      case None => Future.failed(new Exception(s"Appareil inconnu: $id"))
+          case None =>
+            Future.failed(new Exception("GATT non disponible sur cet appareil"))
+          case Some(gatt) =>
+            f(dev, gatt)
+
+  
+  
+  def connectById(id: String): Future[String] =
+    withGatt(id) { (_, gatt) =>
+      gatt.connect().toFuture.map(_ => id)
+    }
+
 
   def disconnectById(id: String): Future[String] =
     get(id) match
@@ -113,51 +124,40 @@ object BluetoothJS:
 
   /** Écrit du texte UTF-8 sur la characteristic UART RX (Write). */
   def writeTextById(id: String, text: String): Future[Unit] =
-    get(id) match
-      case None =>
-        Future.failed(new Exception(s"Appareil inconnu: $id"))
-      case Some(dev) =>
-        dev.gatt.toOption match
-          case None =>
-            Future.failed(new Exception("GATT non disponible sur cet appareil"))
-          case Some(gatt) =>
-            for
-              g   <- ensureConnected(gatt)
-              srv <- g.getPrimaryService(UART_SERVICE).toFuture
-              ch  <- srv.getCharacteristic(UART_CHAR_WRITE).toFuture
-              _   <- ch.writeValue(toUint8(text)).toFuture
-            yield ()
+    withGatt(id) { (_, gatt) =>
+      for
+        g   <- ensureConnected(gatt)
+        srv <- g.getPrimaryService(UART_SERVICE).toFuture
+        ch  <- srv.getCharacteristic(UART_CHAR_WRITE).toFuture
+        _   <- ch.writeValue(toUint8(text)).toFuture
+      yield ()
+    }
 
   /** Active les notifications (FFE2) et émet CustomEvent("bt-notify", { detail: "<texte UTF-8>" }). */
   def enableNotifyById(id: String): Future[Unit] =
-    get(id) match
-      case None => Future.failed(new Exception(s"Appareil inconnu: $id"))
-      case Some(dev) =>
-        dev.gatt.toOption match
-          case None => Future.failed(new Exception("GATT non disponible sur cet appareil"))
-          case Some(gatt) =>
-            for
-              g   <- ensureConnected(gatt)
-              srv <- g.getPrimaryService(UART_SERVICE).toFuture
-              ch  <- srv.getCharacteristic(UART_CHAR_NOTIFY).toFuture
-              _   <- ch.startNotifications().toFuture
-              _    = ch.addEventListener(
-                      "characteristicvaluechanged",
-                      (_: dom.Event) => {
-                        ch.value.toOption.foreach { dv =>
-                          // === Décodage UTF-8 **en streaming** : évite les caractères cassés ===
-                          val u8 = new Uint8Array(dv.buffer, dv.byteOffset, dv.byteLength)
-                          val text = utf8Decoder.decode(
-                            u8,
-                            js.Dictionary("stream" -> true)
-                          )
-
-                          // ✅ CustomEvent("bt-notify", { detail: text })
-                          val init = (new js.Object).asInstanceOf[dom.CustomEventInit]
-                          init.detail = text.asInstanceOf[js.Any]
-                          val evt = new dom.CustomEvent("bt-notify", init)
-                          dom.window.dispatchEvent(evt)
-                        }
-                      }
+    withGatt(id) { (_, gatt) =>
+      for
+        g   <- ensureConnected(gatt)
+        srv <- g.getPrimaryService(UART_SERVICE).toFuture
+        ch  <- srv.getCharacteristic(UART_CHAR_NOTIFY).toFuture
+        _   <- ch.startNotifications().toFuture
+        _    = ch.addEventListener(
+                "characteristicvaluechanged",
+                (_: dom.Event) => {
+                  ch.value.toOption.foreach { dv =>
+                    val u8 = new Uint8Array(dv.buffer, dv.byteOffset, dv.byteLength)
+                    val text = utf8Decoder.decode(
+                      u8,
+                      js.Dictionary("stream" -> true)
                     )
-            yield ()
+
+                    val init = (new js.Object).asInstanceOf[dom.CustomEventInit]
+                    init.detail = text.asInstanceOf[js.Any]
+                    val evt = new dom.CustomEvent("bt-notify", init)
+                    dom.window.dispatchEvent(evt)
+                  }
+                }
+              )
+      yield ()
+    }
+

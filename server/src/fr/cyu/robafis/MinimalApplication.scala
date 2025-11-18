@@ -37,6 +37,10 @@ object MinimalApplication extends cask.MainRoutes:
       channel.send(cask.Ws.Text(upickle.write(ServerMsg.SetCount(model.counter))))
 
       cask.WsActor:
+        case cask.Ws.ChannelClosed() =>
+          model=model.removeSession(id)
+        case cask.Ws.Close(_, _) => 
+          model = model.removeSession(id)
         case cask.Ws.Text(json) =>
           val coachMsg = upickle.read[CoachMsg](json)
           coachMsg match

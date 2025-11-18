@@ -26,3 +26,5 @@ enum Msg:
   case CoachView
   case UpdatePasswordText(text: String)
   case Bluetooth(m: BluetoothMsg)
+  case Tick(nowMs: Long)
+  
