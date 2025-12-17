@@ -1,291 +1,237 @@
-# 🏉 ROBAFIS™ – IHM Coach & Spectateur  
+# 🏉 ROBAFIS™ – IHM Coach & Spectateur
 **Concours Robafis 2025 / 2026 – CY Tech**
+
+> **Statut** : 🟢 Actif | **Version** : 2025.1
+
+Cette application web est le centre de contrôle pour le concours ROBAFIS™. Elle assure le **pilotage du robot Makeblock** via Bluetooth, la **gestion du score** et l’**affichage public** des informations de match.
+
+---
+
+## 📑 Sommaire
+1. [Présentation](#-présentation)
+2. [Architecture du système](#-architecture-du-système)
+3. [Équipe Projet](#-équipe)
+4. [Prérequis](#-prérequis)
+5. [Installation & Démarrage](#-installation--démarrage)
+6. [Guide d'utilisation](#-guide-dutilisation)
+    - [Mode Spectateur](#-mode-spectateur)
+    - [Mode Coach](#-mode-coach-ihm-entraîneur)
+    - [Connexion Bluetooth](#-connexion-bluetooth-makeblock)
+7. [Commandes & Protocole](#-commandes--protocole)
+8. [Intégration Robot (C++)](#-intégration-robot-c)
+9. [Limitations & Dépannage](#-limitations--dépannage)
 
 ---
 
 ## 📌 Présentation
 
-Cette application web permet :
+L'application se divise en deux interfaces :
+* **IHM Entraîneur (Coach)** : Interface sécurisée pour piloter le robot, gérer les arrêts d'urgence et visualiser la télémétrie.
+* **IHM Spectateur** : Affichage passif du score et des actions de jeu en temps réel.
 
-- le **pilotage d’un robot Makeblock** via Bluetooth (IHM Entraîneur),
-- la **gestion du score**,
-- l’**affichage en temps réel** des informations de match (IHM Spectateur).
+---
 
-Le projet est développé dans le cadre du concours **ROBAFIS™ 2025/2026**.
+## 📐 Architecture du système
+
+```mermaid
+graph TD
+    User([Utilisateur]) -->|Ouvre| Browser[Navigateur Web Chrome/Edge]
+    Browser -->|HTTP| Server[Serveur Java - Port 8080]
+    
+    subgraph Interfaces
+        Coach[IHM Coach]
+        Spectator[IHM Spectateur]
+    end
+    
+    Server --> Coach
+    Server --> Spectator
+    
+    Coach -->|Web Bluetooth API| Robot[🤖 Robot Makeblock]
+    Robot -->|Télémétrie & Logs| Coach
+```
 
 ---
 
 ## 👥 Équipe
 
-- **Établissement** : CY Tech  
-- **Chef de projet** : Donovan Cardenas Temiquel  
-- **Équipe projet** : Robafis CY Tech  
-- **Référente** : Sonia Yassa  
+* **Établissement** : CY Tech
+* **Projet** : Robafis CY Tech (Concours 2025/2026)
+* **Chef de projet** : Donovan Cardenas Temiquel
+* **Référente** : Sonia Yassa
 
 ---
 
 ## 🧰 Prérequis
 
 ### 🔧 Matériel
-
-- Un ordinateur équipé du **Bluetooth** (activé avant le lancement)
-- Un module **Makeblock** compatible Bluetooth
-- Le robot Makeblock doit être **allumé**
+- [x] Ordinateur équipé du **Bluetooth** (activé avant le lancement).
+- [x] Module **Makeblock** compatible Bluetooth.
+- [x] Le robot Makeblock doit être **sous tension**.
 
 ### 💻 Logiciel
-
-- **Java 17** (recommandé)
-- Un navigateur compatible **Web Bluetooth** :
-  - ✅ Chrome (recommandé)
-  - ✅ Edge (Chromium)
-  - ❌ Firefox (non supporté)
-- Le fichier **JAR** de l’application
+- **Java 17** (Recommandé).
+- Un navigateur compatible **Web Bluetooth API** :
+    - ✅ **Google Chrome** (Recommandé)
+    - ✅ Microsoft Edge (Chromium)
+    - ❌ Mozilla Firefox (Non supporté)
+    - ⚠️ Safari iOS (Nécessite configuration, voir [Dépannage](#-limitations--dépannage))
 
 ---
 
-## 🖥️ Construction & lancement du serveur
+## 🚀 Installation & Démarrage
 
-### 📦 Construction du JAR
-
+### 1. Construction du JAR
+Si vous avez les sources, compilez le projet avec Mill :
 ```bash
 mill server.assembly
-Fichier généré :
+# Fichier généré : out/server/assembly.dest/out.jar
+```
 
-text
-Copier le code
-out/server/assembly.dest/out.jar
-▶️ Lancer l’application (Windows / Linux / macOS)
-bash
-Copier le code
+### 2. Lancement du Serveur
+Le fichier JAR est multiplateforme (Windows, Linux, macOS).
+
+```bash
 java -jar out.jar
-⚠️ Avant de lancer :
+```
 
-Vérifier que le Bluetooth est activé
-
-Vérifier que le Makeblock est allumé
-
-Le JAR est multiplateforme, aucune recompilation n’est nécessaire.
-
-🌐 Accès aux interfaces IHM
-👀 Mode Spectateur
-Accessible sans authentification :
-
-text
-Copier le code
-http://localhost:8080/
-Affiche :
-
-le score total
-
-le type du dernier score (essai, transformation, pénalité)
-
-📱 Note iPhone / Safari
-Si la page reste blanche :
-
-Ouvrir le menu Safari
-
-Réduire / désactiver les protections de confidentialité
-
-➡️ Autorise l’exécution complète des scripts JavaScript.
-
-🎮 Mode Coach (IHM Entraîneur)
-Accès protégé par mot de passe :
-
-text
-Copier le code
-http://localhost:8080/coach
-Mot de passe : abc
-
-Fonctionnalités :
-
-contrôle du robot Makeblock
-
-commandes de score
-
-chronomètres
-
-visualisation du terrain
-
-gestion des obstacles
-
-retour des messages du robot
-
-🔌 Bluetooth (Makeblock)
-📡 Appairage
-Cliquer sur Rechercher des appareils Makeblock
-
-Sélectionner l’appareil dans la fenêtre du navigateur
-
-Cliquer sur Associer
-
-Sélectionner l’appareil dans la liste déroulante
-
-Cliquer sur Se connecter
-
-✔️ Les commandes robot deviennent actives après connexion.
-
-⚠️ Règles Bluetooth importantes
-Plusieurs Makeblock peuvent être connectés simultanément
-
-Un seul appareil est actif (sélectionné) à la fois
-
-Les commandes et notifications concernent uniquement l’appareil sélectionné
-
-Déconnecter un appareil non sélectionné n’affecte pas l’appareil actif
-
-🎛️ Commandes (Score + Robot)
-📊 Commandes de score
-Bouton	Effet
-+2	Ajoute 2 points (transformation)
-+3	Ajoute 3 points (pénalité)
-+5	Ajoute 5 points (essai)
-Reset Score	Remet uniquement le score à 0
-
-Le type du dernier score est automatiquement affiché sur l’IHM Spectateur.
-
-🤖 Commandes robot (Bluetooth Makeblock)
-Bouton	Code envoyé	Effet
-Démarrer	"0"	Démarre le robot + lance le chrono principal
-Arrêt d’urgence général	"1"	Arrêt + chrono urgence (5 min)
-Arrêt d’urgence mécanique	"2"	Arrêt + chrono urgence (5 min)
-Arrêt d’urgence électrique	"3"	Arrêt + chrono urgence (2 min)
-Interruption	"4"	Met le robot en pause
-Reprendre	"5"	Reprend après interruption / urgence
-Autotest	"6"	Lance l’autotest MegaPi
-Essai	"7"	Lance la séquence “Essai” côté robot
-Transformation	"8"	Lance la séquence “Transformation” côté robot
-
-🔄 Reset (différences)
-Bouton	Effet
-Reset	Remise à zéro générale (chronos, obstacles, ballon, log Bluetooth)
-Reset Score	Réinitialise uniquement le score
-
-⏱️ Chronomètres
-Chronomètre principal
-démarre avec la commande Démarrer
-
-Chronomètre d’urgence
-électrique : 2 minutes
-
-mécanique / général : 5 minutes
-
-Lors d’un arrêt d’urgence :
-
-le chrono principal s’arrête
-
-le chrono d’urgence démarre
-
-À la reprise :
-
-le chrono principal repart
-
-le chrono d’urgence se fige
-
-🗺️ Terrain & obstacles
-Terrain : 4 colonnes × 5 lignes
-
-Messages position envoyés par le robot :
-
-text
-Copier le code
-POS r c
-Gestion des obstacles
-text
-Copier le code
-POS r c D   → ajout d’un obstacle
-POS r c E   → suppression de l’obstacle
-Couleurs :
-
-vert : position actuelle du robot
-
-jaune : obstacle détecté
-
-⚽ Détection du ballon
-Messages envoyés par le robot :
-
-text
-Copier le code
-Ballon 1   → ballon détecté
-Ballon 0   → pas de ballon
-Affichage :
-
-vert : ballon détecté
-
-rouge : pas de ballon
-
-🧾 Terminal Bluetooth
-Le terminal intégré affiche en temps réel :
-
-les messages reçus du robot
-
-les commandes envoyées
-
-les événements importants (démarrage, arrêt, erreurs)
-
-🔄 Déconnexion
-Si :
-
-l’utilisateur clique sur Se déconnecter
-
-ou la carte Makeblock est hors tension
-
-➡️ Les commandes Bluetooth deviennent grisées
-➡️ L’IHM reste fonctionnelle (score, affichage)
-
-🔁 Communication Makeblock → IHM (côté robot)
-Définir la liaison Bluetooth :
-
-cpp
-Copier le code
-#define BT Serial3
-Envoyer un texte :
-
-cpp
-Copier le code
-BT.println(F("DEMARRAGE"));
-Envoyer un nombre :
-
-cpp
-Copier le code
-int N = 42;
-BT.println(N);
-Toutes les données envoyées via BT.println() apparaissent dans le terminal de l’IHM.
-
-⚠️ Limitations connues
-Web Bluetooth :
-
-nécessite HTTPS ou localhost
-
-non supporté par Firefox
-
-Safari iOS :
-
-nécessite un réglage de confidentialité
-
-Une seule IHM Entraîneur active recommandée en compétition
-
-✅ Bonnes pratiques
-Utiliser Chrome
-
-Vérifier l’appareil sélectionné avant chaque commande
-
-Ne connecter qu’un robot actif à la fois
-
-Déconnecter proprement le robot avant extinction
-
-📄 Licence & usage
-Projet académique – usage pédagogique et concours ROBAFIS™ uniquement.
-
-markdown
-Copier le code
+> **⚠️ Avant de lancer :** Assurez-vous que le Bluetooth de votre PC est activé et que le robot est allumé.
 
 ---
 
-👉 Si tu veux, je peux maintenant :
-- faire une **version anglaise**
-- créer une **FAQ**
-- séparer en **README IHM / README Robot**
-- ajouter des **schémas d’architecture**
-- ou adapter le README au **template officiel ROBAFIS™**
+## 📖 Guide d'utilisation
 
-Dis-moi 👍
+### 👀 Mode Spectateur
+Accessible librement pour l'affichage public.
+* **URL** : `http://localhost:8080/`
+* **Affichage** : Score total et type de la dernière action (Essai, Transformation, Pénalité).
+
+### 🎮 Mode Coach (IHM Entraîneur)
+Interface de contrôle protégée.
+* **URL** : `http://localhost:8080/coach`
+* **Mot de passe** : `abc`
+
+**Fonctionnalités :**
+* Contrôle complet du robot (Départ, Arrêt d'urgence).
+* Gestion du score.
+* Visualisation du terrain (4x5) et obstacles.
+* Terminal de logs (messages reçus/envoyés).
+
+### 🔌 Connexion Bluetooth (Makeblock)
+
+1.  Dans l'IHM Coach, cliquer sur **"Rechercher des appareils Makeblock"**.
+2.  Une fenêtre navigateur s'ouvre : sélectionner le module Makeblock et cliquer sur **Associer**.
+3.  Dans l'IHM, sélectionner l'appareil dans la liste déroulante.
+4.  Cliquer sur **"Se connecter"**.
+
+> **⚠️ Règles Bluetooth importantes :**
+> * Plusieurs Makeblock peuvent être appairés, mais **un seul est actif** à la fois.
+> * Les commandes ne sont envoyées qu'à l'appareil sélectionné dans la liste.
+> * Déconnecter un appareil non sélectionné n'interrompt pas le robot en cours de match.
+
+---
+
+## 🎛 Commandes & Protocole
+
+### 📊 Gestion du Score (Arbitrage)
+| Bouton | Effet | Note |
+| :--- | :--- | :--- |
+| **+2** | Ajoute 2 points | Transformation |
+| **+3** | Ajoute 3 points | Pénalité |
+| **+5** | Ajoute 5 points | Essai |
+| **Reset Score** | Remise à 0 du score | N'affecte pas le robot |
+
+### 🤖 Commandes Robot (Protocole Bluetooth)
+Ces codes sont envoyés par l'IHM vers le robot via le port série Bluetooth.
+
+| Bouton IHM | Code Envoyé | Description / Effet |
+| :--- | :---: | :--- |
+| **Démarrer** | `"0"` | Lance le robot + **Chrono Principal** |
+| **Arrêt Général** | `"1"` | Arrêt urgence + Chrono urgence (5 min) |
+| **Arrêt Mécanique** | `"2"` | Arrêt urgence + Chrono urgence (5 min) |
+| **Arrêt Électrique** | `"3"` | Arrêt urgence + Chrono urgence (2 min) |
+| **Interruption** | `"4"` | Pause le robot |
+| **Reprendre** | `"5"` | Reprise après pause ou urgence |
+| **Autotest** | `"6"` | Lance l'autotest MegaPi |
+| **Essai** | `"7"` | Lance la séquence "Essai" sur le robot |
+| **Transformation** | `"8"` | Lance la séquence "Transformation" sur le robot |
+
+### ⏱️ Gestion des Chronomètres
+* **Chrono Principal** : Démarre avec la commande "Démarrer".
+* **Chrono d'Urgence** : Démarre automatiquement lors d'un arrêt d'urgence ("1", "2" ou "3").
+    * À la reprise ("5"), le chrono principal repart et le chrono d'urgence se fige.
+
+### 🔄 Reset (Distinction)
+* **Bouton Reset (Global)** : Remise à zéro totale (Chronos, obstacles, état du ballon, logs).
+* **Bouton Reset Score** : Ne réinitialise que les points.
+
+---
+
+## 📡 Télémétrie (Robot → IHM)
+
+Le robot peut envoyer des informations pour mettre à jour l'IHM Coach en temps réel.
+
+### 🗺️ Terrain & Obstacles
+Le terrain est une grille de 4 colonnes x 5 lignes.
+
+| Syntaxe Message | Action sur l'IHM |
+| :--- | :--- |
+| `POS r c` | Met à jour la **position du robot** (Vert) en ligne `r`, colonne `c`. |
+| `POS r c D` | Ajoute un **obstacle** (Jaune) en ligne `r`, colonne `c`. |
+| `POS r c E` | Efface l'obstacle en ligne `r`, colonne `c`. |
+
+### ⚽ Détection du Ballon
+| Syntaxe Message | Action sur l'IHM |
+| :--- | :--- |
+| `Ballon 1` | Indicateur Ballon passe au **Vert** (Possession). |
+| `Ballon 0` | Indicateur Ballon passe au **Rouge** (Pas de ballon). |
+
+---
+
+## 💻 Intégration Robot (C++)
+
+Exemple de code pour communiquer avec l'IHM depuis un Arduino/Makeblock MegaPi.
+
+```cpp
+// Définition du port Bluetooth (ex: Serial3 sur MegaPi)
+#define BT Serial3
+
+void setup() {
+    BT.begin(115200); // Vitesse bauds standard
+    
+    // Envoyer un message texte (log)
+    BT.println(F("DEMARRAGE SYSTEME"));
+}
+
+void loop() {
+    // Envoyer la position (Ligne 2, Colonne 3)
+    BT.println("POS 2 3");
+    
+    // Envoyer un état de capteur
+    int sensorValue = 42;
+    BT.println(sensorValue);
+    
+    delay(1000);
+}
+```
+*Toutes les données envoyées via `BT.println()` apparaissent dans le terminal de l'IHM.*
+
+---
+
+## ⚠️ Limitations & Dépannage
+
+### Web Bluetooth & Navigateurs
+* **Firefox** : Non supporté.
+* **HTTPS** : L'API Web Bluetooth requiert un contexte sécurisé (HTTPS ou `localhost`).
+* **Safari (iOS)** : Si l'écran reste blanc ou le Bluetooth échoue :
+    1.  Ouvrir les réglages Safari.
+    2.  Aller dans *Confidentialité et sécurité*.
+    3.  Désactiver temporairement les protections de suivi ou activer les fonctionnalités expérimentales Web Bluetooth.
+
+### Déconnexion
+Si l'utilisateur clique sur "Se déconnecter" ou si le robot s'éteint :
+* Les commandes deviennent grisées.
+* L'affichage (Score, Logs) reste accessible.
+* **Conseil** : Toujours déconnecter proprement via l'IHM avant d'éteindre le robot.
+
+---
+*Projet académique – Usage pédagogique et concours ROBAFIS™ uniquement.*
