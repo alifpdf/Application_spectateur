@@ -74,7 +74,7 @@ graph TD
     - ✅ **Google Chrome** (Recommandé)
     - ✅ Microsoft Edge (Chromium)
     - ❌ Mozilla Firefox (Non supporté)
-    - ⚠️ Safari iOS (Nécessite configuration, voir [Dépannage](#dépannage))
+    - ⚠️ Safari iOS (Nécessite configuration, voir [Dépannage](#dépannage)
 
 ---
 
