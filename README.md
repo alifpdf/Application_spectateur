@@ -19,7 +19,7 @@ Cette application web est le centre de contrôle pour le concours ROBAFIS™. El
     - [Connexion Bluetooth](#-connexion-bluetooth-makeblock)
 7. [Commandes & Protocole](#-commandes--protocole)
 8. [Intégration Robot (C)](#-intégration-robot-c)
-9. [Limitations & Dépannage](#-limitations--dépannage)
+9. [Limitations & Dépannage](#depannage)
 
 ---
 
