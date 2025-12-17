@@ -187,7 +187,7 @@ Le terrain est une grille de 4 colonnes x 5 lignes.
 
 ---
 
-## 💻 Intégration Robot (C++)
+## 💻 Intégration Robot (C)
 
 Exemple de code pour communiquer avec l'IHM depuis un Arduino/Makeblock MegaPi.
 
