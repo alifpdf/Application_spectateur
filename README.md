@@ -217,6 +217,8 @@ void loop() {
 
 ---
 
+<div id="depannage"></div>
+
 ## ⚠️ Limitations & Dépannage
 
 ### 🌍 Compatibilité Navigateur
